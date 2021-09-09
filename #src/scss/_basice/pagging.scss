@@ -1,0 +1,32 @@
+.pagging {
+	padding-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	// .pagging__arrow
+	&__arrow {
+	}
+	// .pagging__list
+	&__list {
+		display: flex;
+		gap: 5px;
+		li {
+
+		}
+	}
+	// .pagging__item
+	&__item {
+		width: 30px;
+		height: 30px;
+		color: $color_2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&._active,&:hover {
+
+			background: $color_3;
+			color: $color_1;
+		}
+	}
+}

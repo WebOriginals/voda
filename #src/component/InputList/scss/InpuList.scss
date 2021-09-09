@@ -1,0 +1,102 @@
+.wrapper-size {
+  position: relative;
+  align-self: center;
+}
+
+.wrapper-input{
+  background: $color_1;
+  transition: .5s;
+  padding: 15px 40px 15px 20px;
+  border: 1px solid $color_4;
+  border-radius: 5px;
+}
+
+.choice-of-size {
+  cursor: pointer;
+  width: fit-content;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0 10px;
+  @include adaptive-font(16, 14,1);
+
+  &:active,&:focus{
+    box-shadow: none;
+    outline: none;
+  }
+
+}
+
+.wrapper-input:before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 15px;
+  height: 13px;
+  margin-top: -3.5px;
+  background-image: url("../img/icons/down-arrow.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+
+.transfotm .wrapper-input:before {
+  transform: rotate(180deg);
+}
+
+.wrapper-list {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  height: auto;
+  width: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid $color_4;
+  z-index: 1000;
+  background: $color_1;
+
+  @include mq('tablet-wide') {
+    right: 0;
+  }
+}
+.list{
+  width: 100%;
+}
+
+.list__itams {
+  width: 100%;
+  cursor: pointer;
+  @include adaptive-font(16, 14,1);
+  color: $color_2;
+
+}
+
+.js_size_selector{
+  display: none;
+}
+
+.open{
+  display: block;
+}
+
+.inp-desc{
+  display: none;
+  @include mq('desktop') {
+    display: block;
+  }
+}
+
+.inp-mobl{
+  @include mq('desktop') {
+    display: none;
+  }
+}

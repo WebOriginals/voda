@@ -1,0 +1,42 @@
+.table-top{
+  &__element{
+
+    &:nth-child(-n + 2){
+      cursor: pointer;
+    }
+  }
+}
+
+.table-grid{
+  display: grid;
+  grid-template-columns: 100px 100px 3fr 2fr 2fr 1fr 1fr 40px;
+  grid-gap: 30px;
+  padding: 20px;
+  align-items: center;
+}
+
+.table-bottom{
+  display: grid;
+  grid-gap: 5px;
+
+}
+.table-bottom-row{
+  align-items: center;
+  background: $color_1;
+  border-radius: 7px;
+  padding: 20px;
+
+  &__element{
+    &:nth-child(7){
+      font-weight: 500;
+    }
+    &:last-child{
+      cursor: pointer;
+      &:hover{
+        circle{
+          fill:darken($color_3, 10)
+        }
+      }
+    }
+  }
+}

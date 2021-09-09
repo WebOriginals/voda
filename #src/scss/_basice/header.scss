@@ -1,0 +1,78 @@
+.header {
+  background-color: $color_3;
+  color: $color_1;
+  padding: 10px ;
+
+  a {
+    color: $color_1;
+  }
+
+  &__container {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: auto auto auto auto 1fr auto;
+    justify-content: space-between;
+    align-items: center;
+    @include mq('desktop-wide') {
+      grid-gap: 30px;
+    }
+  }
+  &__link{
+    padding: 0 20px;
+    width: fit-content;
+    @include mq('desktop-wide') {
+      padding: 0 30px;
+    }
+  }
+  &__link:nth-child(3){
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      top: calc(50% - 5px);
+      left: -7px;
+      width: 1px;
+      height: 10px;
+      background: $color_1;
+      @include mq('desktop-wide') {
+        left: -15px;
+      }
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: calc(50% - 5px);
+      right: -7px;
+      width: 1px;
+      height: 10px;
+      background: $color_1;
+      @include mq('desktop-wide') {
+        left: -15px;
+      }
+    }
+
+  }
+  &__link-underline{
+    width: fit-content;
+    font-weight: 500;
+    span{
+      border-bottom: 2px solid $color_1;
+    }
+
+  }
+  &__user{
+    margin-left: auto;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
+  &__btn{
+    border: 2px solid $color_1;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

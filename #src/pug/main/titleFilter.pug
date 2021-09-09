@@ -1,0 +1,61 @@
+section.titleFilter
+    ._container
+        .titleFilter__body
+            .titleFilter__name Аварийные заявки
+            form.titleFilter__filter(method="post" enctype="" autocomplete="off")
+                .filter__input.filter-input
+                    .filter-input__wr
+                        .filter-input__title.filter-title Дата заявки
+                        .filter-input__body.filter-input__body-data
+                            span c
+                            input(type="date" id="start" name="trip-start" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+                .filter__input.filter-input
+                    .filter-input__wr
+                        .filter-input__body.filter-input__body-data
+                            span по
+                            input(type="date" id="finish" name="trip-finish" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+
+
+
+                .filter__input.filter-input
+                    .filter-input__wr
+                        .filter-input__title.filter-title Улица
+                        .filter-input__body
+                            .wrapper-size(data-type="select")
+                                .wrapper-input
+
+                                    .choice-of-size.select-value  Не задано
+
+                                .ii-product__selectors-wrp.js_size_selector
+                                    .wrapper-list
+                                        .list
+                                            .list__itams(data-value="1") Ул. Садовая
+                                            .list__itams(data-value="2") Ул. Красная
+                                            .list__itams(data-value="3") Ул. ЛенинаЛенина Ленина Ленина
+                                            .list__itams(data-value="4") Ул. Стасова
+
+                .filter__input.filter-input
+                    .filter-input__wr
+                        .filter-input__title.filter-title № дома
+                        .filter-input__body
+                            .wrapper-size(data-type="select")
+                                .wrapper-input
+
+                                    .choice-of-size.select-value  Не задано
+
+                                .ii-product__selectors-wrp.js_size_selector
+                                    .wrapper-list
+                                        .list
+                                            .list__itams(data-value="1") 25
+                                            .list__itams(data-value="2") 36
+                                            .list__itams(data-value="3") 98
+                                            .list__itams(data-value="4") 284
+
+                .filter__input.filter-input
+                    .filter-input__wr
+                        .filter-input__title.filter-title Поиск по № аварийной завки
+                        .filter-input__body
+                            input(type="search").filter-input__input.filter-input__input-search
+
+                button(type="submit").titleFilter__filter-btn.button-b Применить
+                button(type="reset").button-g Сбросить
