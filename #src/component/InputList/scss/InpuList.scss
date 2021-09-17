@@ -70,14 +70,20 @@
 }
 .list{
   width: 100%;
+  padding: 10px 20px;
 }
 
 .list__itams {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
   width: 100%;
   cursor: pointer;
   @include adaptive-font(16, 14,1);
   color: $color_2;
-
+  label{
+    width: 100%;
+  }
 }
 
 .js_size_selector{
@@ -98,5 +104,19 @@
 .inp-mobl{
   @include mq('desktop') {
     display: none;
+  }
+}
+.hide{
+  display: none;
+}
+
+.serch{
+  width: 100%;
+  padding: 10px 20px;
+  font-weight: 300 !important;
+  font-size: 16px;
+  background: rgba(213, 213, 213, 0.13);
+  &::placeholder{
+    font-weight: 300 !important;
   }
 }

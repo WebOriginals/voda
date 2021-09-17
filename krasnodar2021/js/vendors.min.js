@@ -178,6 +178,7 @@
         class_selector : 'js_size_selector',
         class_disabel : 'list__itams-disabel',
         wrapper_list : 'wrapper-list',
+        input_search : 'serch',
     };
 
 
@@ -205,8 +206,10 @@
             var selector = $( block ).find( '.' + settings.class_selector ); // Находим облок элементов внутри общей обертки
             var items = $( selector ).find( '.' + settings.class_items ).not( '.' + settings.class_disabel ); // Находим все item внутри общей обертки
             var wr = $( block ).find( '.' + settings.wrapper_list );
+            var serch = $( block ).find( '.' + settings.input_search );
+            console.log(serch);
 
-            var block_type = $( block ).data( 'type' ) || 1; // Тип селекта
+            var block_type = $( block ).data( 'type' ) || 'select'; // Тип селекта
 
             wr.css('width', (elem.clientWidth + 2) + 'px');
 
@@ -225,6 +228,22 @@
 
             $( selector ).toggleClass( settings.class_open ); // Открываем или скрываем
 
+            $(serch).on ({
+                var val = this.val().trim();
+                console.log(val);
+                if(val !== ''){
+
+                    items.each(function (elem){
+                        console.log(elem);
+                        if(elem.text.search(val) == -1){
+                            elem.addClass('hide');
+                        } else {
+                            elem.removeClass('hide');
+                        }
+                    })
+                }
+            });
+
             // Если открыли блок селекта
 
             if( $( selector ).hasClass( settings.class_open ) ){
@@ -236,16 +255,20 @@
                 $( items ).unbind( 'click.' + settings.action ).bind( 'click.' + settings.action, function(){
 
                     switch( block_type ){
-
                         case 'select' :
                             $( value ).text( $( this ).text() ); // Берем текст из item и сохраняем в видимое выбраное значение
                             $( input ).val( $( this ).data( 'value' ) || $( this ).text()).trigger("change"); // Берем дата параметр или текст из item и сохраняем в наш input
                             break;
 
                         case 'checkbox' :
-                            var count_checked = $( selector ).find( 'input:checked' ).length;
-                            var text = count_checked ? ( 'Выбрано : ' + count_checked ) : 'Не задано';
-                            $( value ).text( text );
+                            var count_checked = $( selector ).find( 'input:checked' ); // считаем кол-во выбранных элементов
+                            var values = [];
+                            $(count_checked).each(function(){
+                                values.push($(this).val());
+                            });
+                            values.join(', ')
+                             var text = values.join(', ');
+                             $( value ).text( text );
                             break;
                     }
 
@@ -282,6 +305,20 @@
     $( document ).ready( function(){ hendler.construct(); });
 
 })( jQuery );
+
+
+jQuery(document).ready(function($){
+
+    $('button').on('click', function(){
+        var values = [];
+        $('[name="transport"]:checked').each(function(){
+            values.push($(this).val());
+        });
+
+        alert(values.join(', '));
+    });
+
+});
 "use strict"
 
 const lazyImages = document.querySelectorAll('img[data-src],source[data-srcset]');

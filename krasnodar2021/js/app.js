@@ -256,6 +256,7 @@ BtnAddTransport.addEventListener('click', () => {
 
 
 
+
 //slider
 if (document.querySelector('.applications__container')) {
     let applications = new Swiper(".applications__container", {

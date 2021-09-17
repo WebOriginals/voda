@@ -305,13 +305,25 @@ body._lock {
 
 .list {
   width: 100%;
+  padding: 10px 20px;
 }
 
 .list__itams {
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   cursor: pointer;
   font-size: 16px;
   color: #000000;
+}
+
+.list__itams label {
+  width: 100%;
 }
 
 .js_size_selector {
@@ -324,6 +336,38 @@ body._lock {
 
 .inp-desc {
   display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.serch {
+  width: 100%;
+  padding: 10px 20px;
+  font-weight: 300 !important;
+  font-size: 16px;
+  background: rgba(213, 213, 213, 0.13);
+}
+
+.serch::-webkit-input-placeholder {
+  font-weight: 300 !important;
+}
+
+.serch::-moz-placeholder {
+  font-weight: 300 !important;
+}
+
+.serch:-ms-input-placeholder {
+  font-weight: 300 !important;
+}
+
+.serch::-ms-input-placeholder {
+  font-weight: 300 !important;
+}
+
+.serch::placeholder {
+  font-weight: 300 !important;
 }
 
 body.lock {
@@ -1088,7 +1132,6 @@ body._touch .menu__arrow {
 }
 
 .filter-input__body .list {
-  padding: 10px;
   display: -ms-grid;
   display: grid;
   grid-gap: 10px;
