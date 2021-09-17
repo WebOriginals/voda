@@ -1,5 +1,6 @@
 if (document.querySelector('.applications__container')) {
     let applications = new Swiper(".applications__container", {
+        init: false,
         slidesPerView: 3,
         spaceBetween: 30,
         speed: 800,
@@ -22,4 +23,5 @@ if (document.querySelector('.applications__container')) {
             }
         }
     });
+    applications.init();
 }

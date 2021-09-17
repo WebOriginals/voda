@@ -160,8 +160,6 @@
     const da = new DynamicAdapt("max");
     da.init();
 
-
-
 ( function( $ ){
 
     // Настройки
@@ -206,8 +204,11 @@
             var items = $( selector ).find( '.' + settings.class_items ).not( '.' + settings.class_disabel ); // Находим все item внутри общей обертки
             var wr = $( block ).find( '.' + settings.wrapper_list );
             var serch = $( block ).find( '.' + settings.input_search );
-            console.log($(serch));
-            console.log($(wr));
+
+            //console.log($(serch)[0]);
+            //console.log($('.' + settings.input_search));
+
+            //$(serch).unbind('input').bind('input', function(){ console.log(this); });
 
             var block_type = $( block ).data( 'type' ) || 'select'; // Тип селекта
             wr.css('width', (elem.clientWidth + 2) + 'px');
@@ -222,34 +223,47 @@
                 $( document ).unbind( 'mouseup.' + settings.action ); // Отменяем обработчик клика вне общей обертки
                 $( selector ).removeClass( settings.class_open ); // Закрываем блок
                 $( block ).removeClass( settings.class_transfotm ); // Изменяем стрелку селекта
-                $(serch).unbind('keyup', getSearch); //
             };
 
             $( selector ).toggleClass( settings.class_open ); // Открываем или скрываем
 
+            $( serch ).on('input', function (){
+                var val = $( this ).val().trim();
+
+                if(val !== ''){
+
+                    items.each(function (elem){
+                        //console.log($( this ).text());
+                        if($(items[elem]).text().search(val) == -1){
+                            $( this ).addClass('hide');
+                        } else {
+                            $( this ).removeClass('hide');
+                        }
+                    })
+                }
+            });
+
+
+            if( $( block ).hasClass( settings.input_search ) ) {
                 var getSearch = function (){
                     console.log( this );
-                    var val = $(this).val().trim().toLowerCase();
+                    var val = $( this ).val().trim();
                     console.log(val);
                     if (val !== '') {
 
-                        items.each(function () {
-                            console.log();
-                            if ($(this).text().toLowerCase().search(val) == -1) {
-                                $(this).addClass('hide');
+                        items.each(function (elem) {
+                            console.log(elem);
+                            if (elem.text.search(val) == -1) {
+                                elem.addClass('hide');
                             } else {
-                                $(this).removeClass('hide');
+                                elem.removeClass('hide');
                             }
                         })
-                    } else {
-                        items.each(function () {
-                            $(this).removeClass('hide');
-                        });
                     }
                 };
-                $(serch).bind('keyup', getSearch);
+                $($(serch)[0]).unbind('input').bind('input', function(){ console.log(this); });
 
-
+            };
 
             // Если открыли блок селекта
 
@@ -257,9 +271,59 @@
 
                 $( block ).addClass( settings.class_transfotm ); // Изменяем стрелку селекта
 
-                // Определяем обработчик клика на item
+                // Определяем обработчик
 
-                $( items ).unbind( 'click.' + settings.action ).bind( 'click.' + settings.action, function(){
+                /** Новый код **/
+
+                switch( block_type ){
+
+                    case 'select' :
+                        $( items ).unbind( 'click.' + settings.action ).bind( 'click.' + settings.action, function(){
+                            $( value ).text( $( this ).text() ); // Берем текст из item и сохраняем в видимое выбраное значение
+                            $( input ).val( $( this ).data( 'value' ) || $( this ).text()).trigger("change"); // Берем дата параметр или текст из item и сохраняем в наш input
+                            ready_close();
+                        });
+                        break;
+
+                    case 'checkbox' :
+                        $( selector ).find( 'input[type="checkbox"]' ).unbind( 'change.' + settings.action ).bind( 'change.' + settings.action, function(){
+                            var count_checked = $( selector ).find( 'input:checked' ); // считаем кол-во выбранных элементов
+                            var values = [];
+                            $(count_checked).each(function(){
+                                values.push( ( $( this ).data( 'name' ) || $( this ).val() ) );
+                            });
+                            values.join(', ')
+                            var text = values.join(', ');
+                            $( value ).text( text || 'Не задано' );
+                            ready_close();
+                        });
+                        break;
+                }
+
+                // Проверить текст и закрыть
+
+                var ready_close = function(){
+
+                    if(window.screen.width<=1023) {
+                        $(value).text(value.text().substring(0, 27)); //ограничиваем кол-во символов на строке
+                        if ($(value).text().length >= 27) { // считаем сколько символов и если больше или равно 27 добавлять ...
+                            $(value).append("...");
+                        }
+                    } else {
+                        $(value).text(value.text().substring(0, 50)); //ограничиваем кол-во символов на строке
+                        if ($(value).text().length >= 50) { // считаем сколько символов и если больше или равно 27 добавлять ...
+                            $(value).append("...");
+                        }
+                    }
+
+                    close_select();
+                }
+
+                /** Новый код конец **/
+
+                /** старый код
+
+                 $( items ).unbind( 'click.' + settings.action ).bind( 'click.' + settings.action, function(){
 
                     switch( block_type ){
                         case 'select' :
@@ -268,7 +332,7 @@
                             break;
 
                         case 'checkbox' :
-
+                            setTimeout( function(){ console.log($( selector ).find( 'input:checked' ).length) }, 1000);
                             var count_checked = $( selector ).find( 'input:checked' ); // считаем кол-во выбранных элементов
                             var values = [];
                             $(count_checked).each(function(){
@@ -294,6 +358,8 @@
 
                     close_select();
                 });
+
+                 старый код конец **/
 
                 // Определяем обработчик клика вне блока
 
