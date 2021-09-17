@@ -19,7 +19,6 @@
         input_search : 'serch',
     };
 
-
     let hendler = {
 
         // Инициализация
@@ -45,12 +44,11 @@
             var items = $( selector ).find( '.' + settings.class_items ).not( '.' + settings.class_disabel ); // Находим все item внутри общей обертки
             var wr = $( block ).find( '.' + settings.wrapper_list );
             var serch = $( block ).find( '.' + settings.input_search );
-            console.log(serch);
+            console.log($(serch));
+            console.log($(wr));
 
             var block_type = $( block ).data( 'type' ) || 'select'; // Тип селекта
-
             wr.css('width', (elem.clientWidth + 2) + 'px');
-
             $( window ).resize(function() {
                 wr.css('width', (elem.clientWidth + 2) + 'px');
             });
@@ -62,25 +60,34 @@
                 $( document ).unbind( 'mouseup.' + settings.action ); // Отменяем обработчик клика вне общей обертки
                 $( selector ).removeClass( settings.class_open ); // Закрываем блок
                 $( block ).removeClass( settings.class_transfotm ); // Изменяем стрелку селекта
+                $(serch).unbind('keyup', getSearch); //
             };
 
             $( selector ).toggleClass( settings.class_open ); // Открываем или скрываем
 
-            $(serch).on ({
-                var val = this.val().trim();
-                console.log(val);
-                if(val !== ''){
+                var getSearch = function (){
+                    console.log( this );
+                    var val = $(this).val().trim().toLowerCase();
+                    console.log(val);
+                    if (val !== '') {
 
-                    items.each(function (elem){
-                        console.log(elem);
-                        if(elem.text.search(val) == -1){
-                            elem.addClass('hide');
-                        } else {
-                            elem.removeClass('hide');
-                        }
-                    })
-                }
-            });
+                        items.each(function () {
+                            console.log();
+                            if ($(this).text().toLowerCase().search(val) == -1) {
+                                $(this).addClass('hide');
+                            } else {
+                                $(this).removeClass('hide');
+                            }
+                        })
+                    } else {
+                        items.each(function () {
+                            $(this).removeClass('hide');
+                        });
+                    }
+                };
+                $(serch).bind('keyup', getSearch);
+
+
 
             // Если открыли блок селекта
 
@@ -99,6 +106,7 @@
                             break;
 
                         case 'checkbox' :
+
                             var count_checked = $( selector ).find( 'input:checked' ); // считаем кол-во выбранных элементов
                             var values = [];
                             $(count_checked).each(function(){
@@ -143,17 +151,3 @@
     $( document ).ready( function(){ hendler.construct(); });
 
 })( jQuery );
-
-
-jQuery(document).ready(function($){
-
-    $('button').on('click', function(){
-        var values = [];
-        $('[name="transport"]:checked').each(function(){
-            values.push($(this).val());
-        });
-
-        alert(values.join(', '));
-    });
-
-});

@@ -25,8 +25,12 @@
   background: $color_1;
   border-radius: 7px;
   padding: 20px;
+  margin-bottom: 5px;
 
   &__element{
+    button{
+      background: none;
+    }
     &:nth-child(7){
       font-weight: 500;
     }

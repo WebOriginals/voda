@@ -1217,6 +1217,11 @@ body._touch .menu__arrow {
   background: #FFFFFF;
   border-radius: 7px;
   padding: 20px;
+  margin-bottom: 5px;
+}
+
+.table-bottom-row__element button {
+  background: none;
 }
 
 .table-bottom-row__element:nth-child(7) {
