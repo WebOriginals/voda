@@ -52,5 +52,14 @@ $fontFamily: 'Rubik', sans-serif;
 @import "main/titleFilter";
 @import "main/table";
 
+//registry
+@import "registry/aside";
+@import "registry/titleFilter";
+@import "registry/table";
+
+//transport
+@import "transport/titleFilter";
+@import "transport/table";
+
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================

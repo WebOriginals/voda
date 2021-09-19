@@ -1,0 +1,36 @@
+.registryFilter-body{
+
+  grid-gap: 30px;
+
+  @include mq('desktop1350') {
+    .filter__input:nth-child(2) {
+      transform: translateX(-110px);
+    }
+    .filter__input:nth-child(4) {
+      transform: translateX(-100px);
+    }
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @include mq('2K') {
+    grid-template-columns: auto auto auto auto 1fr 1fr 1.3fr;
+    .filter__input:nth-child(2) {
+      transform: translateX(-30px);
+    }
+    .filter__input:nth-child(4) {
+      transform: translateX(-20px);
+    }
+  }
+  .filter__btns{
+    width: 100%;
+
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    @include mq('2K') {
+      grid-column: 7/8;
+    }
+  }
+  .button-b,.button-g{
+    width: 100%;
+  }
+}

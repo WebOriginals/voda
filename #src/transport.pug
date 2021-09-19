@@ -1,0 +1,22 @@
+include pug/mixins
+doctype html
+html(lang="ru")
+    +head('Назначение машины на бригаду')
+    body
+        .wrapper
+            include pug/_basice/_header
+            .page.duo
+                .main
+                    include pug/main/slider
+                    include pug/transport/titleFilter
+                    include pug/transport/table
+                aside
+                    include pug/registry/aside
+
+
+
+
+            include pug/_basice/_footer
+
+        include pug/_basice/_popup
+        include pug/_basice/_js
