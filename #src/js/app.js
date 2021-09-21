@@ -2,9 +2,6 @@
 @@include('files/checkDevice.js')
 @@include('files/menu.js')
 @@include('files/bodyLook.js')
-@@include('files/popup.js')
-@@include('files/applicationAdd.js')
-
 
 
 
