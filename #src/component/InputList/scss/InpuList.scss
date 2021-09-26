@@ -107,10 +107,10 @@
   }
 }
 .hide{
-  display: none;
+  display: none !important;
 }
 
-.serch{
+.serch,.serch-option{
   width: 100%;
   padding: 10px 20px;
   font-weight: 300 !important;

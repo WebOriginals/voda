@@ -1,11 +1,12 @@
-let serchElemrnt =  document.querySelector('.serch');
-
+let serchElemrnt =  document.querySelector('.serch-option');
+console.log(serchElemrnt);
 serchElemrnt.oninput = function (){
-    let val = this.value.trim();
-    let listElements = document.querySelectorAll('.list__itams');
+    console.log('======');
+    let val = this.value.trim().toLowerCase();
+    let listElements = document.querySelectorAll('.select__options .select__option');
     if(val !== ''){
         listElements.forEach(function (elem){
-            if(elem.innerText.search(val) == -1){
+            if(elem.innerText.toLowerCase().search(val) == -1){
                 elem.classList.add('hide');
             } else {
                 elem.classList.remove('hide');

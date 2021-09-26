@@ -21,8 +21,8 @@ body.lock {
   opacity: 1;
   visibility: visible;
   .popup__content {
-    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
-    opacity: 1;
+    //transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    //opacity: 1;
   }
 }
 
@@ -50,8 +50,8 @@ body.lock {
   padding: 30px;
   position: relative;
   transition: all 0.8s ease 0s;
-  opacity: 0;
-  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+  //opacity: 0;
+  //transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
 
   a {
     &:hover {

@@ -59,5 +59,15 @@ section.titleFilter
                         .filter-input__body
                             input(type="search").filter-input__input.filter-input__input-search
 
+                .filter__input.filter-input
+                    .filter-input__wr
+                        select.form__select(name='age')
+                            option(value='от 18 до 25', selected) Дима
+                            option(value='от 25') Юля
+                            option(value='от 45') Мама
+                            option(value='от 45') папа
+                            option(value='от 45') Слава
+
+
                 button(type="submit").titleFilter__filter-btn.button-b Применить
                 button(type="reset").button-g Сбросить
