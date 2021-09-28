@@ -49,6 +49,8 @@
   border-top: 0;
   font-size: 16px;
   padding: 0px 0px 5px 0px;
+  max-height: 300px;
+  overflow-y: auto;
 }
 .select__option {
   cursor: pointer;
