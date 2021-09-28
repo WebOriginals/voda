@@ -39,6 +39,9 @@ function select_init(select) {
     select.setAttribute('data-default', select_selected_option.value);
     select.style.display = 'none';
 
+
+
+
     select_parent.insertAdjacentHTML('beforeend', '<div class="select select_' + select_modifikator + '"></div>');
 
     let new_select = select.parentElement.querySelector('.select');
@@ -64,9 +67,14 @@ function select_item(select) {
     } else {
         select_type_content = '<div class="select__value"><span>' + select_selected_text + '</span></div>';
     }
-
+    let wrapperEvent = null;
+    if(select.hasAttribute('data-js', 'Event')) {
+        wrapperEvent = `<div class="select__item" onchange="javascript:setTimeout('__doPostBack(\\'ddlFilterStreet\\',\\'\\')', 0)" >`;
+    } else {
+        wrapperEvent = '<div class="select__item">';
+    }
     select_parent.insertAdjacentHTML('beforeend',
-        '<div class="select__item">' +
+        wrapperEvent +
         '<div class="select__title">' + select_type_content + '</div>' +
 
         '<div class="select__options">' + '<input class="serch-option" type="text" placeholder="подсказка"> ' + select_get_options(select_options) + '</div>' +

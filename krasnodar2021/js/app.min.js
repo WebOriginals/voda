@@ -266,6 +266,9 @@ function select_init(select) {
     select.setAttribute('data-default', select_selected_option.value);
     select.style.display = 'none';
 
+
+
+
     select_parent.insertAdjacentHTML('beforeend', '<div class="select select_' + select_modifikator + '"></div>');
 
     let new_select = select.parentElement.querySelector('.select');
@@ -291,9 +294,14 @@ function select_item(select) {
     } else {
         select_type_content = '<div class="select__value"><span>' + select_selected_text + '</span></div>';
     }
-
+    let wrapperEvent = null;
+    if(select.hasAttribute('data-js', 'Event')) {
+        wrapperEvent = `<div class="select__item" onchange="javascript:setTimeout('__doPostBack(\\'ddlFilterStreet\\',\\'\\')', 0)" >`;
+    } else {
+        wrapperEvent = '<div class="select__item">';
+    }
     select_parent.insertAdjacentHTML('beforeend',
-        '<div class="select__item">' +
+        wrapperEvent +
         '<div class="select__title">' + select_type_content + '</div>' +
 
         '<div class="select__options">' + '<input class="serch-option" type="text" placeholder="подсказка"> ' + select_get_options(select_options) + '</div>' +
@@ -462,12 +470,12 @@ let _slideToggle = (target, duration = 500, event) => {
         }
     }
 }
-let serchElemrnt =  document.querySelector('.serch-option');
-console.log(serchElemrnt);
-serchElemrnt.oninput = function (){
-    console.log('======');
-    let val = this.value.trim().toLowerCase();
-    let listElements = document.querySelectorAll('.select__options .select__option');
+let serchElemrnts =  document.querySelectorAll('.serch-option');
+
+const searchOptions = (event) => {
+    let val = event.value.trim().toLowerCase();
+    let body = event.closest('.select__options');
+    let listElements = body.querySelectorAll('.select__option');
     if(val !== ''){
         listElements.forEach(function (elem){
             if(elem.innerText.toLowerCase().search(val) == -1){
@@ -481,7 +489,15 @@ serchElemrnt.oninput = function (){
             elem.classList.remove('hide');
         })
     }
-}
+};
+
+for(serchElemrnt of serchElemrnts){
+    serchElemrnt.oninput = function (){
+        searchOptions(this);
+    }
+};
+
+
 
 
 

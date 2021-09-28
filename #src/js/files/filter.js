@@ -1,9 +1,9 @@
-let serchElemrnt =  document.querySelector('.serch-option');
-console.log(serchElemrnt);
-serchElemrnt.oninput = function (){
-    console.log('======');
-    let val = this.value.trim().toLowerCase();
-    let listElements = document.querySelectorAll('.select__options .select__option');
+let serchElemrnts =  document.querySelectorAll('.serch-option');
+
+const searchOptions = (event) => {
+    let val = event.value.trim().toLowerCase();
+    let body = event.closest('.select__options');
+    let listElements = body.querySelectorAll('.select__option');
     if(val !== ''){
         listElements.forEach(function (elem){
             if(elem.innerText.toLowerCase().search(val) == -1){
@@ -17,5 +17,13 @@ serchElemrnt.oninput = function (){
             elem.classList.remove('hide');
         })
     }
-}
+};
+
+for(serchElemrnt of serchElemrnts){
+    serchElemrnt.oninput = function (){
+        searchOptions(this);
+    }
+};
+
+
 
