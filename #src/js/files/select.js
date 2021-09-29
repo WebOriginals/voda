@@ -67,14 +67,9 @@ function select_item(select) {
     } else {
         select_type_content = '<div class="select__value"><span>' + select_selected_text + '</span></div>';
     }
-    let wrapperEvent = null;
-    if(select.hasAttribute('data-js', 'Event')) {
-        wrapperEvent = `<div class="select__item" onchange="javascript:setTimeout('__doPostBack(\\'ddlFilterStreet\\',\\'\\')', 0)" >`;
-    } else {
-        wrapperEvent = '<div class="select__item">';
-    }
+
     select_parent.insertAdjacentHTML('beforeend',
-        wrapperEvent +
+        '<div class="select__item">' +
         '<div class="select__title">' + select_type_content + '</div>' +
 
         '<div class="select__options">' + '<input class="serch-option" type="text" placeholder="подсказка"> ' + select_get_options(select_options) + '</div>' +
@@ -91,7 +86,6 @@ function select_actions(original, select) {
     const select_input = select.querySelector('.select__input');
 
     select_item.addEventListener('click', function (event) {
-        console.log(event.target , ' --------------');
         let selects = document.querySelectorAll('.select');
         for (let index = 0; index < selects.length; index++) {
             const select = selects[index];
@@ -125,10 +119,13 @@ function select_actions(original, select) {
             if (select_type == 'input') {
                 select_input.value = select_option_text;
                 original.value = select_option_value;
+
             } else {
                 select.querySelector('.select__value').innerHTML = '<span>' + select_option_text + '</span>';
                 original.value = select_option_value;
                 select_option.style.display = 'none';
+                $(original).on('change');
+                $(original).trigger("change");
             }
         });
     }
@@ -231,7 +228,6 @@ let _slideDown = (target, duration = 500) => {
     }, duration);
 }
 let _slideToggle = (target, duration = 500, event) => {
-    console.log(event.target, '***************');
     if (!target.classList.contains('_slide')) {
         if(event.target.closest('.serch-option'))
             return;
@@ -243,3 +239,4 @@ let _slideToggle = (target, duration = 500, event) => {
         }
     }
 }
+
