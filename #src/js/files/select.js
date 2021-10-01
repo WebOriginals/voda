@@ -4,10 +4,6 @@ if (selects.length > 0) {
     selects_init();
 
 }
-let btn = document.querySelector('.button-gr');
-btn.addEventListener('click', () => {
-    console.log('1');
-})
 
 function selects_init() {
     for (let index = 0; index < selects.length; index++) {
@@ -16,7 +12,7 @@ function selects_init() {
         select_init(select);
 
     }
-    //select_callback(selects_update_all);
+    //select_callback();
     document.addEventListener('click', function (e) {
         selects_close(e);
     });
@@ -40,18 +36,19 @@ function selects_close(e) {
 }
 
 function select_init(select) {
-    const select_parent = select.parentElement;
 
-    const select_modifikator = select.getAttribute('class');
+    const select_parent = select.parentElement;
+    const select_modifikator = select.getAttribute('name');
     const select_selected_option = select.querySelector('option:checked');
     select.setAttribute('data-default', select_selected_option.value);
     select.style.display = 'none';
 
-    select_parent.insertAdjacentHTML('beforeend', '<div class="select select_' + select_modifikator + '"></div>');
-
-    let new_select = select.parentElement.querySelector('.select');
-
-    new_select.appendChild(select);
+    let select_block = 'select_' + select_modifikator;
+    if( !select_parent.classList.contains(select_block)){
+        select_parent.insertAdjacentHTML('beforeend', '<div class="select ' + select_block + '"></div>');
+        let new_select = select.parentElement.querySelector('.select.' + select_block);
+        new_select.appendChild(select);
+    }
 
     select_item(select);
 }
@@ -91,7 +88,7 @@ function select_actions(original, select) {
     const select_options = select.querySelectorAll('.select__option');
     const select_type = original.getAttribute('data-type');
     const select_input = select.querySelector('.select__input');
-
+    console.log(select);
     select_item.addEventListener('click', function (event) {
         let selects = document.querySelectorAll('.select');
         for (let index = 0; index < selects.length; index++) {
