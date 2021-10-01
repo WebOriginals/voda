@@ -1,0 +1,125 @@
+.popup.popup-center.popup_popup5
+    .popup__body.custom-body
+        .popup__content.editDataUser-content
+            a.popup__close.close-popup
+                img(src="img/icons/close.svg")
+            .modal-text
+                .modal-text__title Добавить пользователя
+                form.modal-text__form(method="post" enctype="" autocomplete="off")
+                    .editDataUser__form
+                        .editDataUser__row
+                            .form-row__title Фамилия
+                            .form-row__right
+                                input.form-row__input
+                        .editDataUser__row
+                            .form-row__title Имя
+                            .form-row__right
+                                input.form-row__input
+                        .editDataUser__row
+                            .form-row__title Отчество
+                            .form-row__right
+                                input.form-row__input
+                        .editDataUser__row
+                            .form-row__title Роль
+                            .form-row__right
+                                select.form__select(name='role')
+                                    option(value='Начальник участка', selected) Начальник участка
+                                    option(value='Мобильный мастер') Мобильный мастер
+                                    option(value='Диспетчер') Диспетчер
+                        .editDataUser__row
+                            .form-row__title Отдел 
+                            .form-row__right
+                                select.form__select(name='department')
+                                    option(value='ЦЭКС и КНС', selected) ЦЭКС и КНС
+                                    option(value='ЦЭКС') ЦЭКС
+                                    option(value='КНС') КНС
+                        .editDataUser__row
+                            .form-row__title Логин
+                            .form-row__right
+                                input.form-row__input
+                        .editDataUser__row
+                            .form-row__title E-mail
+                            .form-row__right
+                                input(type="email").form-row__input
+                        .editDataUser__row
+                            .form-row__title Пароль
+                            .form-row__right.form-row__password
+                                input(type="password").form-row__input.newpassword
+                                button(type="button", data-target-password="newpassword").password-control
+                        .editDataUser__row
+                            .form-row__title Подтвердите пароль
+                            .form-row__right.form-row__password
+                                input(type="password").form-row__input.repeatpassword
+                                button(type="button", data-target-password="repeatpassword").password-control
+                        .editDataUser__row
+                            .form-row__title Комментарий
+                            .form-row__right
+                                input.form-row__input
+
+                    .form__btns.form-btns
+                        button.form-btns__btn.button-b(type="submit") Сохранить
+                        button.form-btns__btn.button-g(type="reset") Отмена
+
+
+.popup__content.editDataUser-content
+    a.popup__close.close-popup
+        img(src="img/icons/close.svg")
+    .modal-text
+        .modal-text__title Редактирование данных пользователя
+        form.modal-text__form(method="post" enctype="" autocomplete="off")
+            .editDataUser__form
+                .editDataUser__row
+                    .form-row__title Фамилия
+                    .form-row__right
+                        input.form-row__input
+                .editDataUser__row
+                    .form-row__title Имя
+                    .form-row__right
+                        input.form-row__input
+                .editDataUser__row
+                    .form-row__title Отчество
+                    .form-row__right
+                        input.form-row__input
+                .editDataUser__row
+                    .form-row__title Роль
+                    .form-row__right
+                        select.form__select(name='role')
+                            option(value='Начальник участка', selected) Начальник участка
+                            option(value='Мобильный мастер') Мобильный мастер
+                            option(value='Диспетчер') Диспетчер
+                .editDataUser__row
+                    .form-row__title Отдел 
+                    .form-row__right
+                        select.form__select(name='department')
+                            option(value='ЦЭКС и КНС', selected) ЦЭКС и КНС
+                            option(value='ЦЭКС') ЦЭКС
+                            option(value='КНС') КНС
+                .editDataUser__row
+                    .form-row__title Логин
+                    .form-row__right
+                        input.form-row__input
+                .editDataUser__row
+                    .form-row__title E-mail
+                    .form-row__right
+                        input(type="email").form-row__input
+                .editDataUser__row
+                    .form-row__title Пароль
+                    .form-row__right
+                        input(type="password").form-row__input
+                .editDataUser__row
+                    .form-row__title Подтвердите пароль
+                    .form-row__right
+                        .password 
+                            input(type="password").form-row__input
+                            a(href="#").password-control
+                .editDataUser__row
+                    .form-row__title Комментарий
+                    .form-row__right
+                        input.form-row__input
+
+            .form__btns.form-btns
+                button.form-btns__btn.button-b(type="submit") Сохранить
+                button.form-btns__btn.button-g(type="reset") Отмена
+
+
+

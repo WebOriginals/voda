@@ -229,17 +229,21 @@ document.addEventListener('keydown', function (e) {
 let selects = document.getElementsByTagName('select');
 if (selects.length > 0) {
     selects_init();
-    selects_init();
 
 }
+let btn = document.querySelector('.button-gr');
+btn.addEventListener('click', () => {
+    console.log('1');
+})
 
 function selects_init() {
     for (let index = 0; index < selects.length; index++) {
         const select = selects[index];
+
         select_init(select);
 
     }
-    //select_callback();
+    //select_callback(selects_update_all);
     document.addEventListener('click', function (e) {
         selects_close(e);
     });
@@ -264,7 +268,7 @@ function selects_close(e) {
 
 function select_init(select) {
     const select_parent = select.parentElement;
-    console.log(select_parent);
+
     const select_modifikator = select.getAttribute('class');
     const select_selected_option = select.querySelector('option:checked');
     select.setAttribute('data-default', select_selected_option.value);
@@ -273,9 +277,9 @@ function select_init(select) {
     select_parent.insertAdjacentHTML('beforeend', '<div class="select select_' + select_modifikator + '"></div>');
 
     let new_select = select.parentElement.querySelector('.select');
-    new_select.innerHTML=" ";
-    //console.log(new_select);
+
     new_select.appendChild(select);
+
     select_item(select);
 }
 
@@ -501,6 +505,18 @@ for(serchElemrnt of serchElemrnts){
 
 
 
+document.querySelector("body").addEventListener("click",(e)=>{
+        if (e.target.classList.contains("password-control")){
+            let newTarget = document.querySelector(`.${e.target.dataset.targetPassword}`);
+            if (newTarget.getAttribute('type') == 'password') {
+                e.target.classList.add('view');
+                newTarget.setAttribute('type', 'text');
+            } else {
+                e.target.classList.remove('view');
+                newTarget.setAttribute('type', 'password');
+            }
+        }  
+    })
 
 
 //slider

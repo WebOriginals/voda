@@ -1,0 +1,13 @@
+.transportFilter-body{
+  grid-template-columns: 330px 330px 1fr 200px 200px !important;
+  grid-gap: 30px;
+  .titleFilter__filter-btn{
+    grid-column: 4/5;
+  }
+  .button-b{
+    width: 100%;
+  }
+  .button-g{
+    width: 100%;
+  }
+}
