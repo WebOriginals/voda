@@ -228,18 +228,17 @@ document.addEventListener('keydown', function (e) {
 //Select
 let selects = document.getElementsByTagName('select');
 if (selects.length > 0) {
-    selects_init();
+        selects_init();
 
 }
 
 function selects_init() {
     for (let index = 0; index < selects.length; index++) {
         const select = selects[index];
+
         if(!select.hasAttribute('multiple')){
             select_init(select);
         }
-
-
     }
     //select_callback();
     document.addEventListener('click', function (e) {
@@ -269,7 +268,9 @@ function select_init(select) {
     const select_parent = select.parentElement;
     const select_modifikator = select.getAttribute('name');
     const select_selected_option = select.querySelector('option:checked');
+    console.log(select_selected_option);
     select.setAttribute('data-default', select_selected_option.value);
+
     select.style.display = 'none';
 
     let select_block = 'select_' + select_modifikator;
@@ -352,14 +353,8 @@ function select_actions(original, select) {
             if (select_type == 'input') {
                 select_input.value = select_option_text;
                 original.value = select_option_value;
-            } else if(original.hasAttribute("multiple")){
-                console.log(original);
-                select.querySelector('.select__value').innerHTML = '<span>' + select_option_text + '</span>';
-                original.value = select_option_value;
-                select_option.style.display = 'none';
-                $(original).on('change');
-                $(original).trigger("change");
-            } else {
+
+            }  else {
                 select.querySelector('.select__value').innerHTML = '<span>' + select_option_text + '</span>';
                 original.value = select_option_value;
                 select_option.style.display = 'none';
@@ -498,8 +493,6 @@ $(document).ready(function () {
 
     });
 });
-
-
 
 let serchElemrnts =  document.querySelectorAll('.serch-option');
 

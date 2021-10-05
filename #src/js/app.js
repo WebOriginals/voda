@@ -6,8 +6,6 @@
 @@include('files/select.js')
 @@include('files/selectMultiple.js')
 @@include('files/selMul.js')
-
-
 @@include('files/filter.js')
 @@include('files/password.js')
 @@include('files/mobile-filter.js')

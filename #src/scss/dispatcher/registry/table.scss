@@ -1,3 +1,7 @@
+.table-bottom-row__element{
+  border: none !important;
+  padding: 0;
+}
 .table-grid-registry{
   grid-template-columns: 80px 80px 160px 150px 1fr 1fr 1.5fr 100px;
   grid-gap: 30px;

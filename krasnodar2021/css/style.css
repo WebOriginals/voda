@@ -3010,6 +3010,11 @@ textarea.input {
   margin-bottom: 10px;
 }
 
+.table-bottom-row__element {
+  border: none !important;
+  padding: 0;
+}
+
 .table-grid-registry {
   -ms-grid-columns: 80px 80px 160px 150px 1fr 1fr 1.5fr 100px;
   grid-template-columns: 80px 80px 160px 150px 1fr 1fr 1.5fr 100px;
