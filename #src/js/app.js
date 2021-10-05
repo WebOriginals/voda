@@ -7,6 +7,7 @@
 @@include('files/filter.js')
 @@include('files/password.js')
 @@include('files/mobile-filter.js')
+@@include('files/task-process.js')
 
 //slider
 @@include('files/sliders/first.js')
