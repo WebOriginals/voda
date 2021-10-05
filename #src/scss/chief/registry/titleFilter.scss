@@ -1,0 +1,29 @@
+.chiefRegistry__filter{
+    
+    .chiefRegistry__filter-body{
+        display: flex;  
+        align-items: flex-end;
+        gap: 30px;
+        flex-wrap: wrap;
+        }
+        .chiefRegistry__date{
+            display: flex;
+            gap: 10px;
+        }
+        .chiefRegistry__select{
+            min-width: 260px;
+        }
+        .filter-input__input-search{
+            width: 150px;
+        }
+        .button-g{
+            width: 100%;
+        }
+    .chiefRegistry__filter-btns{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px
+
+    }
+
+}

@@ -1,0 +1,99 @@
+section.mobmaster
+    .mobile__container 
+        .mobmaster__title Заявки на транспорт
+        .mobile-filter 
+            button(type="button").mobile-filter__tab-button 
+                span.mobile-filter__title Фильтр
+            .mobile-filter__active-filters 
+                .mobile-filter__active-filter 
+                    span.mobile-filter__active-filter-value c 23.08.2021
+                    button(type="button").mobile-filter__active-filter-reset
+                .mobile-filter__active-filter 
+                    span.mobile-filter__active-filter-value c 14:00
+                    button(type="button").mobile-filter__active-filter-reset
+                .mobile-filter__active-filter 
+                    span.mobile-filter__active-filter-value Экстренные
+                    button(type="button").mobile-filter__active-filter-reset
+            .mobile-filter__body.mobile-filter__hidden 
+                form.mobile-filter__request 
+                    .mobile-filter__request-item
+                        .filter__input.filter-input.date-input
+                            .filter-input__wr
+                                .filter-input__title.filter-title Дата и время заявки
+                                .filter-input__body.filter-input__body-data
+                                    span c
+                                    input(type="date"  name="trip-start" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+                        .filter__input.filter-input.date-input
+                            .filter-input__wr
+                                .filter-input__body.filter-input__body-data
+                                    input(type="time"  name="trip-finish" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+                    .mobile-filter__request-item
+                        .filter__input.filter-input.date-input
+                            .filter-input__wr
+                                .filter-input__body.filter-input__body-data
+                                    span по
+                                    input(type="date"  name="trip-start" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+                        .filter__input.filter-input.date-input
+                            .filter-input__wr
+                                .filter-input__body.filter-input__body-data
+                                    input(type="time"  name="trip-finish" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+                    .filter__input.filter-input.chiefRegistry__select
+                        .filter-input__wr
+                            .filter-input__title.filter-title Статус
+                            .filter-input__body
+                                .wrapper-size(data-type="select")
+                                    .wrapper-input
+
+                                        .choice-of-size.select-value  Не задано
+
+                                    .ii-product__selectors-wrp.js_size_selector
+                                        .wrapper-list
+                                            .list
+                                                .list__itams(data-value="1")
+                                                    svg(width='8', height='8', viewbox='0 0 8 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        circle(cx='4', cy='4', r='4', fill='#48BB3E')
+                                                    span  Свободен
+                                                .list__itams(data-value="2")
+                                                    svg(width='8', height='8', viewbox='0 0 8 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        circle(cx='4', cy='4', r='4', fill='#ED131A')
+                                                    span  Занят
+                                                .list__itams(data-value="3")
+                                                    svg(width='8', height='8', viewbox='0 0 8 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        circle(cx='4', cy='4', r='4', fill='#ED131A')
+                                                    span  Занят начальством
+                    .filter__input.filter-input.chiefRegistry__select
+                        .filter-input__wr
+                            .filter-input__title.filter-title Приоритет
+                            .filter-input__body
+                                .wrapper-size(data-type="select")
+                                    .wrapper-input
+                                        .choice-of-size.select-value  Не задано
+                                    .ii-product__selectors-wrp.js_size_selector
+                                        .wrapper-list
+                                            .list
+                                                .list__itams(data-value="1") срочно
+                                                .list__itams(data-value="2") не срочно
+                                                .list__itams(data-value="3") можно жавтра
+                                                .list__itams(data-value="4") Сейчас
+                    .filter__input.filter-input
+                        .filter-input__wr
+                            .filter-input__title.filter-title № аварийной завки
+                            .filter-input__body
+                                input(type="search").filter-input__input.filter-input__input-search
+                   
+                    .filter__input.filter-input.chiefRegistry__select
+                        .filter-input__wr
+                            .filter-input__title.filter-title Сортировать по
+                            .filter-input__body
+                                .wrapper-size(data-type="select")
+                                    .wrapper-input
+                                        .choice-of-size.select-value  Не задано
+                                    .ii-product__selectors-wrp.js_size_selector
+                                        .wrapper-list
+                                            .list
+                                                .list__itams(data-value="1") 1
+                                                .list__itams(data-value="2") 2
+                                                .list__itams(data-value="3") 3
+                                                .list__itams(data-value="4") 4
+                    button(type="submit").mobile__btn.mobile-filter__submit Применить
+                    button(type="reset").mobile__btn.mobile-filter__reset Сбросить

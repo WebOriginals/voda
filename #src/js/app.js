@@ -6,7 +6,7 @@
 @@include('files/select.js')
 @@include('files/filter.js')
 @@include('files/password.js')
-
+@@include('files/mobile-filter.js')
 
 //slider
 @@include('files/sliders/first.js')

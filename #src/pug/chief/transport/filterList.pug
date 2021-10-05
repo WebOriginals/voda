@@ -2,17 +2,14 @@ section.titleFilter.titleAdmin
     ._container
         .titleFilter__body.registryFilter-body
             .titleFilter__name Транспорт
-            form.titleFilter__filter.registryFilter-body(method="post" enctype="" autocomplete="off")
-
-                .filter__input.filter-input
+            form.chiefTransportFilter__filter(method="post" enctype="" autocomplete="off")
+                .chief__filter-input
                     .filter-input__wr
                         .filter-input__title.filter-title Статус
                         .filter-input__body
                             .wrapper-size(data-type="select")
                                 .wrapper-input
-
                                     .choice-of-size.select-value  Не задано
-
                                 .ii-product__selectors-wrp.js_size_selector
                                     .wrapper-list
                                         .list
@@ -29,78 +26,63 @@ section.titleFilter.titleAdmin
                                                     circle(cx='4', cy='4', r='4', fill='#ED131A')
                                                 span  Занят начальством
 
+                .chief__filter-input
+                    .filter-input__wr
+                        .filter-input__title.filter-title Тип транспорта
+                        .filter-input__body
+                            .wrapper-size(data-type="select")
+                                .wrapper-input
+                                    .choice-of-size.select-value  Все
+                                .ii-product__selectors-wrp.js_size_selector
+                                    .wrapper-list
+                                        .list
+                                            .list__itams(data-value="1") Все
+                                            .list__itams(data-value="2") Тип 1
+                                            .list__itams(data-value="3") Тип 2
+                                            .list__itams(data-value="4") Тип 3
+                .chief__filter-input
+                    .filter-input__wr
+                        .filter-input__title.filter-title Участок
+                        .filter-input__body
+                            .wrapper-size(data-type="select")
+                                .wrapper-input
+                                    .choice-of-size.select-value  Участок 1
+                                .ii-product__selectors-wrp.js_size_selector
+                                    .wrapper-list
+                                        .list
+                                            .list__itams(data-value="1") Участок 1
+                                            .list__itams(data-value="2") Участок 2
+                                            .list__itams(data-value="3") Участок 3
+                                            .list__itams(data-value="4") Участок 4
+                .chief__filter-input
+                    .filter-input__wr
+                        .filter-input__title.filter-title Улица
+                        .filter-input__body
+                            .wrapper-size(data-type="select")
+                                .wrapper-input
+                                    .choice-of-size.select-value  Не задано
+                                .ii-product__selectors-wrp.js_size_selector
+                                    .wrapper-list
+                                        .list
+                                            .list__itams(data-value="1") Улица 1
+                                            .list__itams(data-value="2") Улица 2
+                                            .list__itams(data-value="3") Улица 3
+                                            .list__itams(data-value="4") Улица 4
+                .chief__filter-input
+                    .filter-input__wr
+                        .filter-input__title.filter-title № дома
+                        .filter-input__body
+                            .wrapper-size(data-type="select")
+                                .wrapper-input
+                                    .choice-of-size.select-value  Не задано
+                                .ii-product__selectors-wrp.js_size_selector
+                                    .wrapper-list
+                                        .list
+                                            .list__itams(data-value="1") 1
+                                            .list__itams(data-value="2") 2
+                                            .list__itams(data-value="3") 3
+                                            .list__itams(data-value="4") 4
 
-                .filter__input.filter-input
-                    .filter-input__wr
-                        .filter-input__title.filter-title Приоритет
-                        .filter-input__body
-                            .wrapper-size(data-type="select")
-                                .wrapper-input
-                                    .choice-of-size.select-value  Не задано
-                                .ii-product__selectors-wrp.js_size_selector
-                                    .wrapper-list
-                                        .list
-                                            .list__itams(data-value="1") срочно
-                                            .list__itams(data-value="2") не срочно
-                                            .list__itams(data-value="3") можно жавтра
-                                            .list__itams(data-value="4") Сейчас
-                .filter__input.filter-input
-                    .filter-input__wr
-                        .filter-input__title.filter-title Приоритет
-                        .filter-input__body
-                            .wrapper-size(data-type="select")
-                                .wrapper-input
-                                    .choice-of-size.select-value  Не задано
-                                .ii-product__selectors-wrp.js_size_selector
-                                    .wrapper-list
-                                        .list
-                                            .list__itams(data-value="1") срочно
-                                            .list__itams(data-value="2") не срочно
-                                            .list__itams(data-value="3") можно жавтра
-                                            .list__itams(data-value="4") Сейчас
-                .filter__input.filter-input
-                    .filter-input__wr
-                        .filter-input__title.filter-title Приоритет
-                        .filter-input__body
-                            .wrapper-size(data-type="select")
-                                .wrapper-input
-                                    .choice-of-size.select-value  Не задано
-                                .ii-product__selectors-wrp.js_size_selector
-                                    .wrapper-list
-                                        .list
-                                            .list__itams(data-value="1") срочно
-                                            .list__itams(data-value="2") не срочно
-                                            .list__itams(data-value="3") можно жавтра
-                                            .list__itams(data-value="4") Сейчас
-                .filter__input.filter-input
-                    .filter-input__wr
-                        .filter-input__title.filter-title Приоритет
-                        .filter-input__body
-                            .wrapper-size(data-type="select")
-                                .wrapper-input
-                                    .choice-of-size.select-value  Не задано
-                                .ii-product__selectors-wrp.js_size_selector
-                                    .wrapper-list
-                                        .list
-                                            .list__itams(data-value="1") срочно
-                                            .list__itams(data-value="2") не срочно
-                                            .list__itams(data-value="3") можно жавтра
-                                            .list__itams(data-value="4") Сейчас
-                .filter__input.filter-input
-                    .filter-input__wr
-                        .filter-input__title.filter-title Приоритет
-                        .filter-input__body
-                            .wrapper-size(data-type="select")
-                                .wrapper-input
-                                    .choice-of-size.select-value  Не задано
-                                .ii-product__selectors-wrp.js_size_selector
-                                    .wrapper-list
-                                        .list
-                                            .list__itams(data-value="1") срочно
-                                            .list__itams(data-value="2") не срочно
-                                            .list__itams(data-value="3") можно жавтра
-                                            .list__itams(data-value="4") Сейчас
-
-                .filter__btns
+                .chief__filter-tns
                     button(type="submit").titleFilter__filter-btn.button-b Применить
                     button(type="reset").button-g Сбросить

@@ -1,0 +1,25 @@
+.chiefStats__table-top-row,.chiefStats__table-row{
+    display: grid;
+    grid-template-columns: 200px 240px 1fr 1fr 1fr;
+}
+.chiefStats__table{
+    border: 1px solid #BDBDBD;
+    border-collapse: collapse;
+    th{
+        background: #E5F1F8;
+        span{
+        font-weight: 500;
+        }
+    }
+    td{
+        background: #FFFFFF;
+
+    }
+    td,th{
+        border: 1px solid #BDBDBD;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        padding: 20px
+    }
+}

@@ -1,0 +1,10 @@
+.chiefTransportFilter__filter{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    .chief__filter-tns{
+        display: flex;
+        gap: 30px;
+        grid-column: 5;
+    }
+}

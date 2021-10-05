@@ -1,0 +1,22 @@
+.mobile-filter{
+    &__emergency{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__emergency-row50{
+       display: grid;
+       width: 100%;
+       grid-template-columns: 1fr 1fr;
+       grid-gap: 10px;
+       justify-content: stretch;
+       .filter-input{
+           width: 100%;
+       }
+    }
+    &__emergency-row70{
+        display: grid;
+        grid-gap: 30px 20px;
+        grid-template-columns: 70% 1fr;
+     }
+}

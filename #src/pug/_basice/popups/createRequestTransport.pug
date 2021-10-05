@@ -1,0 +1,67 @@
+.popup.popup-center.popup_popup1
+    .popup__body.custom-body
+        .popup__content.application-content
+            a.popup__close.close-popup
+                img(src="img/icons/close.svg")
+            .mobile-popup
+                .mobile-popup__title Создание завки на транспорт
+                form.transport-request(method="post" enctype="" autocomplete="off")
+                    .transport-request__head
+                        .transport-request__title № заявки на работы
+                        input.transport-request__input
+                        .transport-request__title Адрес производства работ
+                        input.transport-request__input
+                    .transport-request__transport-item 
+                        .transport-request__title Тип транспорта
+                        .transport-request__type
+                            .wrapper-size(data-type="checkbox")
+                                .wrapper-input
+                                    .choice-of-size.select-value  Не задано
+                                .ii-product__selectors-wrp.js_size_selector
+                                    .wrapper-list
+                                        .list
+                                            .list__itams
+                                                input#Bulldozer(type='checkbox', name='transport' value="1" data-name="Бульдозер")
+                                                label(for='Bulldozer') Бульдозер
+
+                                            .list__itams
+                                                input#Crane(type='checkbox', name='transport' value="2" data-name="Кран")
+                                                label(for='Crane') Кран
+
+                                            .list__itams
+                                                input#truck(type='checkbox', name='transport' value="3" data-name="Самосвал")
+                                                label(for='truck') Самосвал
+                                            .list__itams
+                                                input#Tractor(type='checkbox', name='transport' value="4" data-name="Трактор")
+                                                label(for='Tractor') Трактор
+                            button(type="button").transport-request__delete-item
+                            
+                        .transport-request__title Дата и время начала работ
+                        .transport-request__date
+                            input.transport-request__input(type="date"  name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31")
+                            input.transport-request__input(type="time" id="appt" name="appt" min="09:00" max="18:00" required)
+                        
+                        .transport-request__title Продолжительность использования
+                        .transport-request__date
+                            input.transport-request__input(type="time" name="appt" min="09:00" max="18:00" required)
+                            span часов
+
+                        .transport-request__title Приоритет
+                        .form-row__right.urgently.transport-request__check
+                            input#urgently(type='checkbox', name='urgently')
+                            label(for='urgently') Экстренная
+
+                        .transport-request__title Комментарий
+                        input.transport-request__input
+                    
+
+                .request-emergency__create-transport-request
+                    button(type="button" href="#popup1").request-emergency__create-transport-request-btn._popup-link
+                        span Добавить транспорт
+                        span.request-emergency__create-transport-request-icon
+                .transport-request__form-buttons
+                    button(type="submit").mobile__btn.mobile-filter__submit Сохранить
+                    button(type="reset").mobile__btn.mobile-filter__reset Отмена
+
+
+                    

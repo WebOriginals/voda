@@ -1,0 +1,104 @@
+.chiefTitle__body{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.chiefStats__form{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px 100px;
+}
+.chiefStats__form-inputs{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+}
+.chiefStats-input{
+    width: 250px;
+}
+
+.chiefStats__export{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    color: #000000;
+    .wrapper-input{
+        border: none;
+        background: none;
+        font-size: 14px;
+        font-weight: 500;
+        &::before{
+            background-image: url(../img/icons/arrow-down-black.svg);
+            width: 10px;
+            height: 6px;
+        }
+    }
+    .choice-of-size {
+        padding: 0;
+    }
+    .form-row__title{
+        color: #000000;
+        font-style: normal;
+    }
+}
+.chiefStats__export-panel {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+.chiefStats__export-select{
+    display: flex;
+    align-items: center;
+}
+.button-green{
+    background: #48BB3E;
+    color: #fff;
+    padding: 0 27px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+    transition: .5s;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.chiefStats__info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.chiefStats__info-item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.chiefStats__info-value{
+    font-weight: 500;
+}
+
+.table__plug {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.table__plug-text{
+    font-size: 30px;
+    text-align: center;
+    color: #BCBCBC;
+}
