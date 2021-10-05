@@ -1,0 +1,77 @@
+.task-item{
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 36px;
+    }
+    &__nav-buttons {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    &__btn{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s;
+        &:hover{
+            background: #888888;
+            path{
+                fill:#000;
+            }
+        }
+    }
+    &__btn-blue{
+        background: #0072BC;
+        &:hover{
+            background: #00558C;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px 0;
+    }
+    &__applicant{
+        display: grid;
+        grid-template-columns: 230px 1fr;
+        grid-gap: 20px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+        border-radius: 7px;
+        padding: 30px;
+        font-size: 20px;
+    }
+    &__applicant-title{
+        font-style: italic;
+        color: #828282;
+    }
+    &__applicant-value{
+        font-size: 22px;
+    }
+    &__transport-table{
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+        border-radius: 7px;
+        background: #FFFFFF;
+        padding: 30px;
+    }
+    &__buttons{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+}
+.mobile__success-btn{
+    background: #48BB3E;
+}

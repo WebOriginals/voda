@@ -1,0 +1,15 @@
+include pug/mixins
+doctype html
+html(lang="ru")
+    +head('Главная')
+    body
+        .wrapper
+            include pug/_basice/_headerMobile
+            .page.main
+                include pug/mobile-master/request/filter
+                include pug/mobile-master/request/table
+
+
+            include pug/_basice/_footer
+
+        include pug/_basice/_js

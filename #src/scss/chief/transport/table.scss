@@ -1,0 +1,27 @@
+.chiefTransport-table-grid-registry-top{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr 1.5fr 1.5fr;
+    grid-gap: 30px;
+    padding: 20px;
+    align-items: center;
+
+}
+.chiefTransport-table-grid-registry{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr 1.5fr 1.5fr;
+    grid-gap: 30px;
+    padding: 20px;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    .wrapper-input{
+        border: none;
+        width: auto;
+        padding-left: 0;
+        .choice-of-size{
+            padding: 0;
+        }
+    }
+}

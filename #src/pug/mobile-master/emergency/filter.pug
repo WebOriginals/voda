@@ -1,0 +1,87 @@
+section.mobmaster
+    .mobile__container 
+        .mobmaster__title Аварийные завки
+        .mobile-filter 
+            button(type="button").mobile-filter__tab-button 
+                span.mobile-filter__title Фильтр
+            .mobile-filter__active-filters 
+                .mobile-filter__active-filter 
+                    span.mobile-filter__active-filter-value c 23.08.2021
+                    button(type="button").mobile-filter__active-filter-reset
+                .mobile-filter__active-filter 
+                    span.mobile-filter__active-filter-value c 14:00
+                    button(type="button").mobile-filter__active-filter-reset
+                .mobile-filter__active-filter 
+                    span.mobile-filter__active-filter-value Экстренные
+                    button(type="button").mobile-filter__active-filter-reset
+            .mobile-filter__body.mobile-filter__hidden 
+                form.mobile-filter__emergency
+                    .mobile-filter__emergency-row50
+                        .mobile-filter__request-item
+                            .filter__input.filter-input.date-input
+                                .filter-input__wr
+                                    .filter-input__title.filter-title Дата и время заявки
+                                    .filter-input__body.filter-input__body-data
+                                        span c
+                                        input(type="date"  name="trip-start" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+                        .mobile-filter__request-item
+                            .filter__input.filter-input.date-input
+                                .filter-input__wr
+                                    .filter-input__body.filter-input__body-data
+                                        span по
+                                        input(type="date"  name="trip-start" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+                    .mobile-filter__emergency-row70
+                        .filter__input.filter-input.chiefRegistry__select
+                            .filter-input__wr
+                                .filter-input__title.filter-title Улица
+                                .filter-input__body
+                                    .wrapper-size(data-type="select")
+                                        .wrapper-input
+                                            .choice-of-size.select-value  Не задано
+                                        .ii-product__selectors-wrp.js_size_selector
+                                            .wrapper-list
+                                                .list
+                                                    .list__itams(data-value="1") Улица 1
+                                                    .list__itams(data-value="2") Улица 2
+                                                    .list__itams(data-value="3") Улица 3
+                                                    .list__itams(data-value="4") Улица 4
+                        .filter__input.filter-input.chiefRegistry__select
+                            .filter-input__wr
+                                .filter-input__title.filter-title Номер дома
+                                .filter-input__body
+                                    .wrapper-size(data-type="select")
+                                        .wrapper-input
+                                            .choice-of-size.select-value  Все
+                                        .ii-product__selectors-wrp.js_size_selector
+                                            .wrapper-list
+                                                .list
+                                                    .list__itams(data-value="1") 1
+                                                    .list__itams(data-value="2") 2
+                                                    .list__itams(data-value="3") 3
+                                                    .list__itams(data-value="4") 4
+                    .mobile-filter__emergency-row50
+                        .filter__input.filter-input 
+                            .filter-input__wr 
+                                .filter-input__title.filter-title Поиск по № аварийной заявки
+                                .filter-input__body 
+                                    input.filter-input__input.filter-input__input-search(type="search")
+
+                    
+                        .filter__input.filter-input.chiefRegistry__select
+                            .filter-input__wr
+                                .filter-input__title.filter-title Сортировать по
+                                .filter-input__body
+                                    .wrapper-size(data-type="select")
+                                        .wrapper-input
+                                            .choice-of-size.select-value  Не задано
+                                        .ii-product__selectors-wrp.js_size_selector
+                                            .wrapper-list
+                                                .list
+                                                    .list__itams(data-value="1") 1
+                                                    .list__itams(data-value="2") 2
+                                                    .list__itams(data-value="3") 3
+                                                    .list__itams(data-value="4") 4
+                    .mobile-filter__emergency-row50
+                        button(type="submit").mobile__btn.mobile-filter__submit Применить
+                        button(type="reset").mobile__btn.mobile-filter__reset Сбросить
+

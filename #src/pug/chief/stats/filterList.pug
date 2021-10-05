@@ -1,0 +1,62 @@
+section.titleFilter.titleAdmin
+    ._container
+        .titleFilter__body.chiefTitle__body
+            .titleAdmin__title
+                .titleFilter__name.titleAdmin__name Отчет по исполнению
+            form.chiefStats__form(method="post" enctype="" autocomplete="off")
+                .chiefStats__form-inputs
+                    .filter__input.filter-input
+                        .filter-input__wr
+                            .filter-input__title.filter-title Дата заявки 
+                            .filter-input__body.filter-input__body-data
+                                span c
+                                input(type="date"  name="trip-start" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+                    .filter__input.filter-input
+                        .filter-input__wr
+                            .filter-input__body.filter-input__body-data
+                                span по
+                                input(type="date"  name="trip-start" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+
+                    .filter__input.filter-input.chiefStats-input
+                        .filter-input__wr
+                            .filter-input__title.filter-title Тип транспорта
+                            .filter-input__wr
+                                select.form__select(name='department')
+                                    option(value='от 18 до 25', selected) Не задано
+                                    option(value='от 25') 1
+                                    option(value='от 45') 2
+                                    option(value='от 45') 3
+                    .filter__input.filter-input.chiefStats-input
+                        .filter-input__wr
+                            .filter-input__title.filter-title Транспорт
+                            .filter-input__wr
+                                select.form__select(name='department')
+                                    option(value='от 18 до 25', selected) Не задано
+                                    option(value='от 25') 1
+                                    option(value='от 45') 2
+                                    option(value='от 45') 3
+
+                .titleAdmin__buttons 
+                    button(type="submit").titleFilter__filter-btn.button-b Сформировать отчет
+        .chiefStats__export
+            .chiefStats__info 
+                .chiefStats__info-item 
+                    span.chiefStats__info-title Общее количество заявок:
+                    span.chiefStats__info-value 6
+                .chiefStats__info-item 
+                    span.chiefStats__info-title Общее время на работах:
+                    span.chiefStats__info-value  22 часа 27 минут
+            .chiefStats__export-panel 
+                .chiefStats__export-select
+                    .form-row__title Экспорт в
+                    .filter-input__body
+                        .wrapper-size(data-type="select")
+                            .wrapper-input
+                                .choice-of-size.select-value  PDF
+                            .ii-product__selectors-wrp.js_size_selector
+                                .wrapper-list
+                                    .list
+                                        .list__itams(data-value="1") PDF
+                                        .list__itams(data-value="2") SVG
+                                        .list__itams(data-value="3") XML
+                button(type="submit").titleFilter__filter-btn.button-green Сформировать отчет

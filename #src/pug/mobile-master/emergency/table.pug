@@ -1,0 +1,124 @@
+section.mobile-table 
+    .mobile__container 
+        .request-emergency__list
+            .request-emergency__item
+                .request-emergency__item-info
+                    .request-transport__info 
+                        .request-transport__numbers 
+                            .request-transport__info-item 
+                                span.request-emergency__info-title №
+                                span.request-emergency__info-value 001
+                            .request-transport__info-item 
+                                span.request-emergency__info-title № авар. заявки
+                                span.request-emergency__info-value 54253
+                        .request-transport__info-item 
+                            span.request-emergency__info-title Стадия
+                            span.request-emergency__info-value Обследование
+                        .request-transport__info-item 
+                            span.request-emergency__info-title Адрес
+                            span.request-emergency__info-value ул. Академика Трубилина, д. 35
+                        .request-transport__info-item 
+                            span.request-emergency__info-title Проявление
+                            span.request-emergency__info-value Ремонтные работы на сети
+
+                    button.request-emergency__item-arrow
+                        svg(width="35", height="20", viewBox="0 0 35 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+                            path(fill-rule="evenodd", clip-rule="evenodd", d="M-4.28475e-07 10.1976C-4.64687e-07 9.36921 0.671572 8.69764 1.5 8.69764L29.3966 8.69763L24.4291 2.43183C23.9144 1.78267 24.0234 0.8392 24.6726 0.32454C25.3218 -0.190118 26.2652 -0.0810787 26.7799 0.568087L34.4316 10.2196L26.7584 19.4583C26.2291 20.0956 25.2834 20.1832 24.6461 19.6539C24.0088 19.1246 23.9213 18.1789 24.4506 17.5416L29.3043 11.6976L1.5 11.6976C0.671573 11.6976 -3.92263e-07 11.0261 -4.28475e-07 10.1976Z", fill="#828282")
+                table.request-emergency__transport-table 
+                    tbody 
+                        tr.request-emergency__transport-tr 
+                            th.request-emergency__transport-th
+                                span Тип транспорта
+                            th.request-emergency__transport-th
+                                span Транспорт
+                            th.request-emergency__transport-th
+                                span Прибыл
+                            th.request-emergency__transport-th
+                                span Убыл
+                        tr.request-emergency__transport-tr 
+                            td.request-emergency__transport-td 
+                                span Трактор
+                            td.request-emergency__transport-td 
+                                span.request-emergency__transport-bold Трактор ТТ 345
+                            td.request-emergency__transport-td 
+                                input(name="transport_id_1", type="radio", checked="true", id="transport_id_1_in", value="Прибыл").request-emergency__radio-input
+                                label(for="transport_id_1_in").request-emergency__label
+                            td.request-emergency__transport-td 
+                                input(name="transport_id_1", type="radio", id="transport_id_1_out", value="Убыл").request-emergency__radio-input
+                                label(for="transport_id_1_out").request-emergency__label
+                        tr.request-emergency__transport-tr 
+                            td.request-emergency__transport-td 
+                                span Бульдозер
+                            td.request-emergency__transport-td 
+                                span.request-emergency__transport-bold  Бульдозер АА 505
+                            td.request-emergency__transport-td 
+                                input(name="transport_id_2", type="radio", checked="true", id="transport_id_2_in", value="Прибыл").request-emergency__radio-input
+                                label(for="transport_id_2_in").request-emergency__label
+                            td.request-emergency__transport-td 
+                                input(name="transport_id_2", type="radio", id="transport_id_2_out", value="Убыл").request-emergency__radio-input
+                                label(for="transport_id_2_out").request-emergency__label
+                .request-emergency__create-transport-request
+                    button(type="button" href="#popup1").request-emergency__create-transport-request-btn._popup-link
+                        span Создать завку на транспорт
+                        span.request-emergency__create-transport-request-icon
+
+            .request-emergency__item
+                .request-emergency__item-info
+                    .request-transport__info 
+                        .request-transport__numbers 
+                            .request-transport__info-item 
+                                span.request-emergency__info-title №
+                                span.request-emergency__info-value 001
+                            .request-transport__info-item 
+                                span.request-emergency__info-title № авар. заявки
+                                span.request-emergency__info-value 54253
+                        .request-transport__info-item 
+                            span.request-emergency__info-title Стадия
+                            span.request-emergency__info-value Обследование
+                        .request-transport__info-item 
+                            span.request-emergency__info-title Адрес
+                            span.request-emergency__info-value ул. Академика Трубилина, д. 35
+                        .request-transport__info-item 
+                            span.request-emergency__info-title Проявление
+                            span.request-emergency__info-value Ремонтные работы на сети
+
+                    button.request-emergency__item-arrow
+                        svg(width="35", height="20", viewBox="0 0 35 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+                            path(fill-rule="evenodd", clip-rule="evenodd", d="M-4.28475e-07 10.1976C-4.64687e-07 9.36921 0.671572 8.69764 1.5 8.69764L29.3966 8.69763L24.4291 2.43183C23.9144 1.78267 24.0234 0.8392 24.6726 0.32454C25.3218 -0.190118 26.2652 -0.0810787 26.7799 0.568087L34.4316 10.2196L26.7584 19.4583C26.2291 20.0956 25.2834 20.1832 24.6461 19.6539C24.0088 19.1246 23.9213 18.1789 24.4506 17.5416L29.3043 11.6976L1.5 11.6976C0.671573 11.6976 -3.92263e-07 11.0261 -4.28475e-07 10.1976Z", fill="#828282")
+                table.request-emergency__transport-table 
+                    tbody 
+                        tr.request-emergency__transport-tr 
+                            th.request-emergency__transport-th
+                                span Тип транспорта
+                            th.request-emergency__transport-th
+                                span Транспорт
+                            th.request-emergency__transport-th
+                                span Прибыл
+                            th.request-emergency__transport-th
+                                span Убыл
+                        tr.request-emergency__transport-tr 
+                            td.request-emergency__transport-td 
+                                span Трактор
+                            td.request-emergency__transport-td 
+                                span.request-emergency__transport-bold Трактор ТТ 345
+                            td.request-emergency__transport-td 
+                                input(name="transport_id_3", type="radio", checked="true", id="transport_id_3_in", value="Прибыл").request-emergency__radio-input
+                                label(for="transport_id_3_in").request-emergency__label
+                            td.request-emergency__transport-td 
+                                input(name="transport_id_3", type="radio", id="transport_id_3_out", value="Убыл").request-emergency__radio-input
+                                label(for="transport_id_3_out").request-emergency__label
+                        tr.request-emergency__transport-tr 
+                            td.request-emergency__transport-td 
+                                span Бульдозер
+                            td.request-emergency__transport-td 
+                                span.request-emergency__transport-bold  Бульдозер АА 505
+                            td.request-emergency__transport-td 
+                                input(name="transport_id_4", type="radio", checked="true", id="transport_id_4_in", value="Прибыл").request-emergency__radio-input
+                                label(for="transport_id_4_in").request-emergency__label
+                            td.request-emergency__transport-td 
+                                input(name="transport_id_4", type="radio", id="transport_id_4_out", value="Убыл").request-emergency__radio-input
+                                label(for="transport_id_4_out").request-emergency__label
+                .request-emergency__create-transport-request
+                    button(type="button" href="#popup1").request-emergency__create-transport-request-btn._popup-link
+                        span Создать завку на транспорт
+                        span.request-emergency__create-transport-request-icon

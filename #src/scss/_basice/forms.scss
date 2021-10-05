@@ -1,5 +1,5 @@
 //<FORM ()>====================================================================================================
-.form {
+/*.form {
 	&__row {
 	}
 	&__column {
@@ -369,6 +369,32 @@ textarea.input {
 			text-align: center;
 		}
 	}
+}
+*/
+
+.form-row__password{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+}
+.password {
+	position: relative;
+}
+.password-control {
+	position: absolute;
+	top: 50%;
+	transform: translate(0,-50%);
+	right: 11px;
+	width: 30px;
+	height: 20px;
+	background: url("../img/icons/eye-open.svg") 0 0 no-repeat;
+}
+.password-control.view {
+	background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+
+}
+.sorted__column{
+	cursor: pointer;
 }
 //</QUANTITY>====================================================================================================
 

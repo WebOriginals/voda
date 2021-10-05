@@ -1,0 +1,17 @@
+section.auth 
+    .auth__body 
+        .auth__logo 
+            img(src="img/auth-logo.svg", alt="logo")
+        .auth__form 
+            form.auth__form-body(action="")
+                span.auth__title Вход
+                .auth__form-inputs 
+                    .auth__form-input
+                        span.auth__input-title Логин
+                        input.auth__input(type="text")
+                    .auth__form-input
+                        span.auth__input-title Пароль
+                        input.auth__input(type="password")
+                    .auth__form-buttons 
+                        button.auth__recover-pass Восстановить пароль
+                        button.auth__sing-in Войти

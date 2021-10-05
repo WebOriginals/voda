@@ -1,0 +1,80 @@
+section.titleFilter
+    ._container
+        .chiefRegistry__filter
+            .titleFilter__name Реестр заявок на АТ
+            form.chiefRegistry__filter-body(method="post" enctype="" autocomplete="off")
+                .chiefRegistry__date 
+                    .filter__input.filter-input
+                        .filter-input__wr
+                            .filter-input__title.filter-title Дата и время заявки
+                            .filter-input__body.filter-input__body-data
+                                span c
+                                input(type="date"  name="trip-start" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+                    .filter__input.filter-input
+                        .filter-input__wr
+                            .filter-input__body.filter-input__body-data
+                                input(type="time"  name="trip-finish" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+                .chiefRegistry__date 
+                    .filter__input.filter-input
+                        .filter-input__wr
+                            .filter-input__body.filter-input__body-data
+                                span по
+                                input(type="date"  name="trip-start" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+                    .filter__input.filter-input
+                        .filter-input__wr
+                            .filter-input__body.filter-input__body-data
+                                input(type="time"  name="trip-finish" value="2021-07-22" min="2021-01-01" max="2030-12-31").filter-input__input
+
+
+
+
+                .filter__input.filter-input.chiefRegistry__select
+                    .filter-input__wr
+                        .filter-input__title.filter-title Статус
+                        .filter-input__body
+                            .wrapper-size(data-type="select")
+                                .wrapper-input
+
+                                    .choice-of-size.select-value  Не задано
+
+                                .ii-product__selectors-wrp.js_size_selector
+                                    .wrapper-list
+                                        .list
+                                            .list__itams(data-value="1")
+                                                svg(width='8', height='8', viewbox='0 0 8 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    circle(cx='4', cy='4', r='4', fill='#48BB3E')
+                                                span  Свободен
+                                            .list__itams(data-value="2")
+                                                svg(width='8', height='8', viewbox='0 0 8 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    circle(cx='4', cy='4', r='4', fill='#ED131A')
+                                                span  Занят
+                                            .list__itams(data-value="3")
+                                                svg(width='8', height='8', viewbox='0 0 8 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    circle(cx='4', cy='4', r='4', fill='#ED131A')
+                                                span  Занят начальством
+
+
+                .filter__input.filter-input.chiefRegistry__select
+                    .filter-input__wr
+                        .filter-input__title.filter-title Приоритет
+                        .filter-input__body
+                            .wrapper-size(data-type="select")
+                                .wrapper-input
+                                    .choice-of-size.select-value  Не задано
+                                .ii-product__selectors-wrp.js_size_selector
+                                    .wrapper-list
+                                        .list
+                                            .list__itams(data-value="1") срочно
+                                            .list__itams(data-value="2") не срочно
+                                            .list__itams(data-value="3") можно жавтра
+                                            .list__itams(data-value="4") Сейчас
+
+                .filter__input.filter-input
+                    .filter-input__wr
+                        .filter-input__title.filter-title № аварийной завки
+                        .filter-input__body
+                            input(type="search").filter-input__input.filter-input__input-search
+
+                .chiefRegistry__filter-btns
+                    button(type="submit").titleFilter__filter-btn.button-b Применить
+                    button(type="reset").button-g Сбросить

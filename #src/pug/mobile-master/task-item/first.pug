@@ -1,0 +1,73 @@
+section.task-item 
+    .mobile__container 
+        .task-item__header 
+            .task-item__title Завка № 54281
+            .task-item__nav-buttons 
+                a(href="#").task-item__btn 
+                    svg(width="35", height="20", viewBox="0 0 35 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+                        path(fill-rule="evenodd", clip-rule="evenodd", d="M35 9.80236C35 10.6308 34.3284 11.3024 33.5 11.3024L5.60341 11.3024L10.5709 17.5682C11.0856 18.2173 10.9766 19.1608 10.3274 19.6755C9.67823 20.1901 8.73476 20.0811 8.22011 19.4319L0.568364 9.78039L8.24162 0.54166C8.77091 -0.0956255 9.71662 -0.183166 10.3539 0.346134C10.9912 0.875434 11.0787 1.82114 10.5494 2.45842L5.69573 8.30237L33.5 8.30236C34.3284 8.30236 35 8.97394 35 9.80236Z", fill="#828282")
+                a(href="#").task-item__btn 
+                    svg(width="35", height="20", viewBox="0 0 35 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+                        path(fill-rule="evenodd", clip-rule="evenodd", d="M0.568359 10.1976C0.56836 9.36921 1.23993 8.69764 2.06836 8.69764L29.9649 8.69764L24.9974 2.43184C24.4828 1.78267 24.5918 0.839201 25.241 0.324541C25.8901 -0.190117 26.8336 -0.0810773 27.3483 0.568089L35 10.2196L27.3267 19.4583C26.7974 20.0956 25.8517 20.1832 25.2145 19.6539C24.5772 19.1246 24.4896 18.1789 25.0189 17.5416L29.8726 11.6976L2.06836 11.6976C1.23993 11.6976 0.568359 11.0261 0.568359 10.1976Z", fill="#828282")
+        .task-item__info 
+            .task-item__applicant
+                span.task-item__applicant-title Дата и время
+                span.task-item__applicant-value 18.08.2021   9.05
+
+                span.task-item__applicant-title Стадия
+                span.task-item__applicant-value Обследование
+
+                span.task-item__applicant-title ФИО
+                span.task-item__applicant-value Мирошников Геннадий Валерьевич
+
+                span.task-item__applicant-title Телефон
+                span.task-item__applicant-value 8 900-000-00-00
+
+                span.task-item__applicant-title Адрес
+                span.task-item__applicant-value ул. Академика Трубилина, д. 35
+
+                span.task-item__applicant-title Систама
+                span.task-item__applicant-value Водоснабжение
+
+                span.task-item__applicant-title Проявление
+                span.task-item__applicant-value Ремонтные работы на сети
+                
+                span.task-item__applicant-title Доп. информация
+                span.task-item__applicant-value 
+           
+            table.task-item__transport-table 
+                tbody 
+                    tr.request-emergency__transport-tr 
+                        th.request-emergency__transport-th
+                            span Тип транспорта
+                        th.request-emergency__transport-th
+                            span Транспорт
+                        th.request-emergency__transport-th
+                            span Прибыл
+                        th.request-emergency__transport-th
+                            span Убыл
+                    tr.request-emergency__transport-tr 
+                        td.request-emergency__transport-td 
+                            span Трактор
+                        td.request-emergency__transport-td 
+                            span.request-emergency__transport-bold Трактор ТТ 345
+                        td.request-emergency__transport-td 
+                            input(name="transport_id_3", type="radio", checked="true", id="transport_id_3_in", value="Прибыл").request-emergency__radio-input
+                            label(for="transport_id_3_in").request-emergency__label
+                        td.request-emergency__transport-td 
+                            input(name="transport_id_3", type="radio", id="transport_id_3_out", value="Убыл").request-emergency__radio-input
+                            label(for="transport_id_3_out").request-emergency__label
+                    tr.request-emergency__transport-tr 
+                        td.request-emergency__transport-td 
+                            span Бульдозер
+                        td.request-emergency__transport-td 
+                            span.request-emergency__transport-bold  Бульдозер АА 505
+                        td.request-emergency__transport-td 
+                            input(name="transport_id_4", type="radio", checked="true", id="transport_id_4_in", value="Прибыл").request-emergency__radio-input
+                            label(for="transport_id_4_in").request-emergency__label
+                        td.request-emergency__transport-td 
+                            input(name="transport_id_4", type="radio", id="transport_id_4_out", value="Убыл").request-emergency__radio-input
+                            label(for="transport_id_4_out").request-emergency__label
+            .task-item__buttons 
+                button.mobile__btn.mobile__success-btn Принять
+                button.mobile__btn.mobile-filter__reset Отмена

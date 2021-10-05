@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a04f6e4b-6efd-42ef-884e-d15832daffcc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/krasnodar2021/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/krasnodar2021/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +75,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gulp.js.default" />
         <item itemvalue="Gulp.js.default" />
       </list>
     </recent_temporary>
