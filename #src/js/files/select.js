@@ -88,7 +88,7 @@ function select_actions(original, select) {
     const select_options = select.querySelectorAll('.select__option');
     const select_type = original.getAttribute('data-type');
     const select_input = select.querySelector('.select__input');
-    console.log(select);
+
     select_item.addEventListener('click', function (event) {
         let selects = document.querySelectorAll('.select');
         for (let index = 0; index < selects.length; index++) {
@@ -123,7 +123,13 @@ function select_actions(original, select) {
             if (select_type == 'input') {
                 select_input.value = select_option_text;
                 original.value = select_option_value;
-
+            } else if(original.hasAttribute("multiple")){
+                console.log(original);
+                select.querySelector('.select__value').innerHTML = '<span>' + select_option_text + '</span>';
+                original.value = select_option_value;
+                select_option.style.display = 'none';
+                $(original).on('change');
+                $(original).trigger("change");
             } else {
                 select.querySelector('.select__value').innerHTML = '<span>' + select_option_text + '</span>';
                 original.value = select_option_value;

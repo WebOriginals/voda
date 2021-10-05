@@ -23,28 +23,15 @@
                             .form__row.form-row
                                 .form-row__title Тип транспорта
                                 .form-row__right
-                                    .wrapper-size(data-type="checkbox")
-                                        .wrapper-input
-                                            .choice-of-size.select-value  Не задано
+                                    select.select-mul#example-getting-started(multiple='multiple')
+                                        option(value='cheese') Cheese
+                                        option(value='tomatoes') Tomatoes
+                                        option(value='mozarella') Mozzarella
+                                        option(value='mushrooms') Mushrooms
+                                        option(value='pepperoni') Pepperoni
+                                        option(value='onions') Onions
 
-                                        .ii-product__selectors-wrp.js_size_selector
-                                            .wrapper-list
-                                                .list
 
-                                                    .list__itams
-                                                        input#Bulldozer(type='checkbox', name='transport' value="1" data-name="Бульдозер")
-                                                        label(for='Bulldozer') Бульдозер
-
-                                                    .list__itams
-                                                        input#Crane(type='checkbox', name='transport' value="2" data-name="Кран")
-                                                        label(for='Crane') Кран
-
-                                                    .list__itams
-                                                        input#truck(type='checkbox', name='transport' value="3" data-name="Самосвал")
-                                                        label(for='truck') Самосвал
-                                                    .list__itams
-                                                        input#Tractor(type='checkbox', name='transport' value="4" data-name="Трактор")
-                                                        label(for='Tractor') Трактор
 
 
                                 a(href="#").remove
@@ -116,28 +103,13 @@
                     .form__row.form-row
                         .form-row__title Тип транспорта
                         .form-row__right
-                            .wrapper-size(data-type="checkbox")
-                                .wrapper-input
-                                    .choice-of-size.select-value  Не задано
+                            select(multiple, data-placeholder='Add tools')
+                                option Sketch
+                                option(selected='') Framer X
+                                option Photoshop
+                                option Principle
+                                option Invision
 
-                                .ii-product__selectors-wrp.js_size_selector
-                                    .wrapper-list
-                                        .list
-
-                                            .list__itams
-                                                input#Bulldozer(type='checkbox', name='transport' value="1" data-name="Бульдозер")
-                                                label(for='Bulldozer') Бульдозер
-
-                                            .list__itams
-                                                input#Crane(type='checkbox', name='transport' value="2" data-name="Кран")
-                                                label(for='Crane') Кран
-
-                                            .list__itams
-                                                input#truck(type='checkbox', name='transport' value="3" data-name="Самосвал")
-                                                label(for='truck') Самосвал
-                                            .list__itams
-                                                input#Tractor(type='checkbox', name='transport' value="4" data-name="Трактор")
-                                                label(for='Tractor') Трактор
 
 
                         a(href="#").remove

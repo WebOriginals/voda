@@ -156,9 +156,9 @@ table {
           align-items: center;
   height: 50px;
   cursor: pointer;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -186,9 +186,9 @@ table {
           align-items: center;
   height: 50px;
   cursor: pointer;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -216,9 +216,9 @@ table {
           align-items: center;
   height: 50px;
   cursor: pointer;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -252,9 +252,9 @@ button {
 
 .wrapper-input {
   background: #FFFFFF;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   padding: 15px 40px 15px 20px;
   border: 1px solid #888888;
   border-radius: 5px;
@@ -608,9 +608,9 @@ body.lock {
   height: 50px;
   background: #0072BC;
   border-radius: 4px;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   color: #ffffff;
   font-size: 16px;
 }
@@ -633,9 +633,9 @@ body.lock {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #828282;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   text-align: center;
 }
 
@@ -1021,7 +1021,7 @@ body.lock {
 }
 
 .modal-text__form .list__itams input[type=checkbox]:checked + label:before {
-  content: "\2713";
+  content: "✓";
   font-size: 15px;
   color: #f3f3f3;
   text-align: center;
@@ -1063,7 +1063,7 @@ body.lock {
 }
 
 .urgently input[type=checkbox]:checked + label:before {
-  content: "\2713";
+  content: "✓";
   font-size: 15px;
   color: #f3f3f3;
   text-align: center;
@@ -1219,7 +1219,7 @@ body.lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-      grid-template-areas: "q ." "w e";
+      grid-template-areas: "q ." "w e";
 }
 
 .new-comment__form .new-comment__to {
@@ -1507,7 +1507,7 @@ body.lock {
 }
 
 .header__link:nth-child(3):before {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(50% - 5px);
   left: -7px;
@@ -1517,7 +1517,7 @@ body.lock {
 }
 
 .header__link:nth-child(3):after {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(50% - 5px);
   right: -7px;
@@ -1783,96 +1783,155 @@ body._touch .menu__arrow {
   color: #FFFFFF;
 }
 
-.select {
+span.multiselect-native-select {
   position: relative;
 }
 
-.select__item {
-  position: relative;
+span.multiselect-native-select select {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px -1px -1px -3px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  left: 50%;
+  top: 30px;
 }
 
-.select__title {
-  color: #000;
-  border: 1px solid #d9d9d9;
-  background-color: #fff;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.select__value {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 16px;
-  height: 50px;
-  padding: 0px 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  border: 1px solid #888;
-  border-radius: 5px;
-}
-
-.select__value span {
-  height: 1em;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
-
-.select__value::before {
-  content: "";
-  display: inline-block;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  width: 11px;
-  height: 7px;
-  background: url("../img/select.svg") center/100% no-repeat;
-}
-
-.select__options {
-  color: #000;
+.multiselect.dropdown-toggle:after {
   display: none;
+}
+
+.multiselect {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.multiselect-container {
   position: absolute;
-  top: 47px;
-  border-radius: 0 0 5px 5px;
-  min-width: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #888;
-  font-size: 16px;
-  padding: 0px 0px 5px 0px;
-  max-height: 300px;
-  overflow-y: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.select__option {
+.multiselect-container .multiselect-reset .input-group {
+  width: 93%;
+}
+
+.multiselect-container .multiselect-filter > .fa-search {
+  z-index: 1;
+  padding-left: 0.75rem;
+}
+
+.multiselect-container .multiselect-filter > input.multiselect-search {
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  padding-left: 2rem;
+  margin-left: -1.625rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.multiselect-container .multiselect-filter > input.multiselect-search:focus {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.multiselect-container .multiselect-filter > .multiselect-moz-clear-filter {
+  margin-left: -1.5rem;
+  display: none;
+}
+
+.multiselect-container .multiselect-option.multiselect-group-option-indented {
+  padding-left: 1.75rem;
+}
+
+.multiselect-container .multiselect-option,
+.multiselect-container .multiselect-group,
+.multiselect-container .multiselect-all {
+  padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+}
+
+.multiselect-container .multiselect-option.dropdown-item,
+.multiselect-container .multiselect-group.dropdown-item,
+.multiselect-container .multiselect-all.dropdown-item,
+.multiselect-container .multiselect-option.dropdown-toggle,
+.multiselect-container .multiselect-group.dropdown-toggle,
+.multiselect-container .multiselect-all.dropdown-toggle {
   cursor: pointer;
-  padding: 10px 20px;
-  margin: 0px 0px 0px 0px;
 }
 
-.select._active {
-  z-index: 5;
+.multiselect-container .multiselect-option .form-check-label,
+.multiselect-container .multiselect-group .form-check-label,
+.multiselect-container .multiselect-all .form-check-label {
+  cursor: pointer;
 }
 
-.select._active .select__value::before {
-  -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+.multiselect-container .multiselect-option.active:not(.multiselect-active-item-fallback),
+.multiselect-container .multiselect-group.active:not(.multiselect-active-item-fallback),
+.multiselect-container .multiselect-all.active:not(.multiselect-active-item-fallback),
+.multiselect-container .multiselect-option:not(.multiselect-active-item-fallback):active,
+.multiselect-container .multiselect-group:not(.multiselect-active-item-fallback):active,
+.multiselect-container .multiselect-all:not(.multiselect-active-item-fallback):active {
+  background-color: lightgrey;
+  color: black;
 }
 
-.select._active.select__options {
-  display: block;
+.multiselect-container .multiselect-option:hover,
+.multiselect-container .multiselect-group:hover,
+.multiselect-container .multiselect-all:hover,
+.multiselect-container .multiselect-option:focus,
+.multiselect-container .multiselect-group:focus,
+.multiselect-container .multiselect-all:focus {
+  background-color: darkgray !important;
+}
+
+.multiselect-container .multiselect-option .form-check,
+.multiselect-container .multiselect-group .form-check,
+.multiselect-container .multiselect-all .form-check {
+  padding: 0 5px 0 20px;
+}
+
+.multiselect-container .multiselect-option:focus,
+.multiselect-container .multiselect-group:focus,
+.multiselect-container .multiselect-all:focus {
+  outline: none;
+}
+
+.form-inline .multiselect-container span.form-check {
+  padding: 3px 20px 3px 40px;
+}
+
+.input-group.input-group-sm > .multiselect-native-select .multiselect {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding-right: 1.75rem;
+  height: 4em;
+}
+
+.input-group > .multiselect-native-select {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 1%;
+}
+
+.input-group > .multiselect-native-select > div.btn-group {
+  width: 100%;
+}
+
+.input-group > .multiselect-native-select:not(:first-child) .multiselect {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group > .multiselect-native-select:not(:last-child) .multiselect {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 /*.form {
@@ -2475,8 +2534,8 @@ textarea.input {
 }
 
 .table-grid-transport-top {
-  -ms-grid-columns: 1fr 1fr 1fr  100px;
-  grid-template-columns: 1fr 1fr 1fr  100px;
+  -ms-grid-columns: 1fr 1fr 1fr 100px;
+  grid-template-columns: 1fr 1fr 1fr 100px;
   grid-gap: 30px;
   padding: 20px;
   -webkit-box-align: center;
@@ -2566,15 +2625,15 @@ textarea.input {
   text-align: left;
 }
 
-.table-top__element:nth-child(-n + 2) {
+.table-top__element:nth-child(-n+2) {
   cursor: pointer;
 }
 
 .table-grid-top {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100px 100px 230px 153px 153px 200px  40px;
-  grid-template-columns: 100px 100px 230px 153px 153px 200px  40px;
+  -ms-grid-columns: 100px 100px 230px 153px 153px 200px 40px;
+  grid-template-columns: 100px 100px 230px 153px 153px 200px 40px;
   grid-gap: 30px;
   padding: 20px;
   -webkit-box-align: center;
@@ -2585,8 +2644,8 @@ textarea.input {
 .table-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100px 100px 3fr 2fr 2fr 1.5fr  40px;
-  grid-template-columns: 100px 100px 3fr 2fr 2fr 1.5fr  40px;
+  -ms-grid-columns: 100px 100px 3fr 2fr 2fr 1.5fr 40px;
+  grid-template-columns: 100px 100px 3fr 2fr 2fr 1.5fr 40px;
   grid-gap: 30px;
   padding: 20px;
   -webkit-box-align: center;
@@ -2935,8 +2994,8 @@ textarea.input {
 }
 
 .table-grid-transport-top {
-  -ms-grid-columns: 1fr 1fr 1fr  100px;
-  grid-template-columns: 1fr 1fr 1fr  100px;
+  -ms-grid-columns: 1fr 1fr 1fr 100px;
+  grid-template-columns: 1fr 1fr 1fr 100px;
   grid-gap: 30px;
   padding: 20px;
   -webkit-box-align: center;
@@ -3271,9 +3330,9 @@ textarea.input {
           align-items: center;
   height: 50px;
   cursor: pointer;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -3410,7 +3469,7 @@ textarea.input {
 
 .mobile-filter__tab-button:before {
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   bottom: 0;
   height: 1px;
@@ -3480,7 +3539,7 @@ textarea.input {
 
 .mobile-filter__active-filter-reset:before {
   position: absolute;
-  content: '';
+  content: "";
   width: 20px;
   height: 3px;
   border-radius: 3px;
@@ -3494,7 +3553,7 @@ textarea.input {
 
 .mobile-filter__active-filter-reset:after {
   position: absolute;
-  content: '';
+  content: "";
   width: 20px;
   height: 3px;
   border-radius: 3px;
@@ -3814,7 +3873,7 @@ textarea.input {
 }
 
 .request-emergency__create-transport-request-icon:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 28px;
   height: 4px;
@@ -3828,7 +3887,7 @@ textarea.input {
 }
 
 .request-emergency__create-transport-request-icon:after {
-  content: '';
+  content: "";
   position: absolute;
   height: 28px;
   width: 4px;
@@ -3865,7 +3924,7 @@ textarea.input {
 }
 
 .request-emergency__radio-input + label::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 34px;
   height: 34px;
@@ -4162,8 +4221,8 @@ textarea.input {
   }
 
   .table-grid-top {
-    -ms-grid-columns: 100px 100px 3fr 2fr 2fr 1.5fr  40px;
-    grid-template-columns: 100px 100px 3fr 2fr 2fr 1.5fr  40px;
+    -ms-grid-columns: 100px 100px 3fr 2fr 2fr 1.5fr 40px;
+    grid-template-columns: 100px 100px 3fr 2fr 2fr 1.5fr 40px;
   }
 }
 
