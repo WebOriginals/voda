@@ -2,7 +2,6 @@
   background-color: $color_3;
   color: $color_1;
   padding: 10px ;
-
   a {
     color: $color_1;
   }
@@ -17,6 +16,9 @@
     @include mq('desktop-wide') {
       grid-gap: 30px;
     }
+  }
+  &__admin-container{
+    grid-template-columns: auto auto auto 1fr auto;
   }
   &__link{
     padding: 0 20px;
@@ -75,5 +77,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+
+.header-mobile{
+  background-color: $color_3;
+  color: $color_1;
+  padding: 10px ;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  a {
+    color: $color_1;
+  }
+  &__container{
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    a{
+      font-size: 22px;
+    }
+  }
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    .header__btn{
+      border: none;
+      padding: 0;
+      
+    }
+  }
+  &__link{
+    font-weight: 500;
+    &:nth-child(1){
+      border-left: 1px solid $color_1;
+    }
+  }
+  
+  &__link-underline{
+    border-bottom: 2px solid $color_1;
   }
 }
