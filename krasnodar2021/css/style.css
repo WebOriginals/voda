@@ -156,9 +156,9 @@ table {
           align-items: center;
   height: 50px;
   cursor: pointer;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -186,9 +186,9 @@ table {
           align-items: center;
   height: 50px;
   cursor: pointer;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -216,9 +216,9 @@ table {
           align-items: center;
   height: 50px;
   cursor: pointer;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -252,9 +252,9 @@ button {
 
 .wrapper-input {
   background: #FFFFFF;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   padding: 15px 40px 15px 20px;
   border: 1px solid #888888;
   border-radius: 5px;
@@ -608,9 +608,9 @@ body.lock {
   height: 50px;
   background: #0072BC;
   border-radius: 4px;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   color: #ffffff;
   font-size: 16px;
 }
@@ -633,9 +633,9 @@ body.lock {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #828282;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   text-align: center;
 }
 
@@ -1021,7 +1021,7 @@ body.lock {
 }
 
 .modal-text__form .list__itams input[type=checkbox]:checked + label:before {
-  content: "\2713";
+  content: "✓";
   font-size: 15px;
   color: #f3f3f3;
   text-align: center;
@@ -1063,7 +1063,7 @@ body.lock {
 }
 
 .urgently input[type=checkbox]:checked + label:before {
-  content: "\2713";
+  content: "✓";
   font-size: 15px;
   color: #f3f3f3;
   text-align: center;
@@ -1219,7 +1219,7 @@ body.lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-      grid-template-areas: "q ." "w e";
+      grid-template-areas: "q ." "w e";
 }
 
 .new-comment__form .new-comment__to {
@@ -1507,7 +1507,7 @@ body.lock {
 }
 
 .header__link:nth-child(3):before {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(50% - 5px);
   left: -7px;
@@ -1517,7 +1517,7 @@ body.lock {
 }
 
 .header__link:nth-child(3):after {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(50% - 5px);
   right: -7px;
@@ -2475,8 +2475,8 @@ textarea.input {
 }
 
 .table-grid-transport-top {
-  -ms-grid-columns: 1fr 1fr 1fr  100px;
-  grid-template-columns: 1fr 1fr 1fr  100px;
+  -ms-grid-columns: 1fr 1fr 1fr 100px;
+  grid-template-columns: 1fr 1fr 1fr 100px;
   grid-gap: 30px;
   padding: 20px;
   -webkit-box-align: center;
@@ -2566,15 +2566,15 @@ textarea.input {
   text-align: left;
 }
 
-.table-top__element:nth-child(-n + 2) {
+.table-top__element:nth-child(-n+2) {
   cursor: pointer;
 }
 
 .table-grid-top {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100px 100px 230px 153px 153px 200px  40px;
-  grid-template-columns: 100px 100px 230px 153px 153px 200px  40px;
+  -ms-grid-columns: 100px 100px 230px 153px 153px 200px 40px;
+  grid-template-columns: 100px 100px 230px 153px 153px 200px 40px;
   grid-gap: 30px;
   padding: 20px;
   -webkit-box-align: center;
@@ -2585,8 +2585,8 @@ textarea.input {
 .table-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100px 100px 3fr 2fr 2fr 1.5fr  40px;
-  grid-template-columns: 100px 100px 3fr 2fr 2fr 1.5fr  40px;
+  -ms-grid-columns: 100px 100px 3fr 2fr 2fr 1.5fr 40px;
+  grid-template-columns: 100px 100px 3fr 2fr 2fr 1.5fr 40px;
   grid-gap: 30px;
   padding: 20px;
   -webkit-box-align: center;
@@ -2859,6 +2859,11 @@ textarea.input {
   margin-bottom: 10px;
 }
 
+.table-bottom-row__element {
+  border: none !important;
+  padding: 0;
+}
+
 .table-grid-registry {
   -ms-grid-columns: 80px 80px 160px 150px 1fr 1fr 1.5fr 100px;
   grid-template-columns: 80px 80px 160px 150px 1fr 1fr 1.5fr 100px;
@@ -2935,8 +2940,8 @@ textarea.input {
 }
 
 .table-grid-transport-top {
-  -ms-grid-columns: 1fr 1fr 1fr  100px;
-  grid-template-columns: 1fr 1fr 1fr  100px;
+  -ms-grid-columns: 1fr 1fr 1fr 100px;
+  grid-template-columns: 1fr 1fr 1fr 100px;
   grid-gap: 30px;
   padding: 20px;
   -webkit-box-align: center;
@@ -3271,9 +3276,9 @@ textarea.input {
           align-items: center;
   height: 50px;
   cursor: pointer;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -3410,7 +3415,7 @@ textarea.input {
 
 .mobile-filter__tab-button:before {
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   bottom: 0;
   height: 1px;
@@ -3480,7 +3485,7 @@ textarea.input {
 
 .mobile-filter__active-filter-reset:before {
   position: absolute;
-  content: '';
+  content: "";
   width: 20px;
   height: 3px;
   border-radius: 3px;
@@ -3494,7 +3499,7 @@ textarea.input {
 
 .mobile-filter__active-filter-reset:after {
   position: absolute;
-  content: '';
+  content: "";
   width: 20px;
   height: 3px;
   border-radius: 3px;
@@ -3814,7 +3819,7 @@ textarea.input {
 }
 
 .request-emergency__create-transport-request-icon:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 28px;
   height: 4px;
@@ -3828,7 +3833,7 @@ textarea.input {
 }
 
 .request-emergency__create-transport-request-icon:after {
-  content: '';
+  content: "";
   position: absolute;
   height: 28px;
   width: 4px;
@@ -3865,7 +3870,7 @@ textarea.input {
 }
 
 .request-emergency__radio-input + label::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 34px;
   height: 34px;
@@ -4162,8 +4167,8 @@ textarea.input {
   }
 
   .table-grid-top {
-    -ms-grid-columns: 100px 100px 3fr 2fr 2fr 1.5fr  40px;
-    grid-template-columns: 100px 100px 3fr 2fr 2fr 1.5fr  40px;
+    -ms-grid-columns: 100px 100px 3fr 2fr 2fr 1.5fr 40px;
+    grid-template-columns: 100px 100px 3fr 2fr 2fr 1.5fr 40px;
   }
 }
 
