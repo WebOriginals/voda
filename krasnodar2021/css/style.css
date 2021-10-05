@@ -1783,6 +1783,98 @@ body._touch .menu__arrow {
   color: #FFFFFF;
 }
 
+.select {
+  position: relative;
+}
+
+.select__item {
+  position: relative;
+}
+
+.select__title {
+  color: #000;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.select__value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  height: 50px;
+  padding: 0px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+.select__value span {
+  height: 1em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.select__value::before {
+  content: "";
+  display: inline-block;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  width: 11px;
+  height: 7px;
+  background: url("../img/select.svg") center/100% no-repeat;
+}
+
+.select__options {
+  color: #000;
+  display: none;
+  position: absolute;
+  top: 47px;
+  border-radius: 0 0 5px 5px;
+  min-width: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #888;
+  font-size: 16px;
+  padding: 0px 0px 5px 0px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.select__option {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0px 0px 0px 0px;
+}
+
+.select._active {
+  z-index: 5;
+}
+
+.select._active .select__value::before {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.select._active.select__options {
+  display: block;
+}
+
 span.multiselect-native-select {
   position: relative;
 }

@@ -8,8 +8,10 @@ if (selects.length > 0) {
 function selects_init() {
     for (let index = 0; index < selects.length; index++) {
         const select = selects[index];
+        if(!select.hasAttribute('multiple')){
+            select_init(select);
+        }
 
-        select_init(select);
 
     }
     //select_callback();
