@@ -49,9 +49,9 @@ $fontFamily: 'Rubik', sans-serif;
 
 
 //main
-@import "main/slider";
-@import "main/titleFilter";
-@import "main/table";
+//@import "main/slider";
+//@import "main/titleFilter";
+//@import "main/table";
 
 //registry
 @import "registry/aside";
@@ -61,6 +61,28 @@ $fontFamily: 'Rubik', sans-serif;
 //transport
 @import "transport/titleFilter";
 @import "transport/table";
+
+
+
+//dispatcher
+@import "dispatcher/main/slider.scss";
+@import "dispatcher/main/table.scss";
+@import "dispatcher/main/titleFilter.scss";
+
+@import "dispatcher/registry/aside.scss";
+@import "dispatcher/registry/table.scss";
+@import "dispatcher/registry/titleFilter.scss";
+
+@import "dispatcher/transport/table.scss";
+@import "dispatcher/transport/titleFilter.scss";
+
+//admin
+@import "admin/table";
+
+//transport
+@import "registry/titleFilter";
+@import "registry/table";
+@import "registry/aside.scss";
 
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================

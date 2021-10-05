@@ -1,0 +1,37 @@
+section.titleFilter.titleAdmin
+    ._container
+        .titleFilter__body.titleAdmin__body
+            .titleAdmin__title
+                .titleFilter__name.titleAdmin__name Спецтехника
+                button.table-bottom-row__element._popup-link(href="#popup3")
+                            svg(width='40', height='40', viewbox='0 0 40 40', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                circle(cx='20', cy='20', r='20', fill='#0072BC')
+                                rect(x='19', y='13', width='2', height='14', rx='1', fill='white')
+                                rect(x='13', y='21', width='2', height='14', rx='1', transform='rotate(-90 13 21)', fill='white')
+            form.titleAdmin__form(method="post" enctype="" autocomplete="off")
+                .filter__input.filter-input.titleAdmin__input
+                    .filter-input__wr
+                        .filter-input__title.filter-title Тип транспорта 
+                        .filter-input__wr
+                            select.form__select(name='department')
+                                option(value='от 18 до 25', selected) Все
+                                option(value='от 25') 1
+                                option(value='от 45') 2
+                                option(value='от 45') 3
+                                option(value='от 45') 55
+                                option(value='от 25') 245
+                                option(value='от 45') 55
+                                option(value='от 45') 77
+                                option(value='от 45') 88
+                                option(value='от 25') 9
+                                option(value='от 45') 32
+                                option(value='от 45') 25
+                                option(value='от 45') 48
+                                option(value='от 25') 67
+                                option(value='от 45') 57
+                                option(value='от 45') 66
+                                option(value='от 45') 456546
+
+                .titleAdmin__buttons 
+                    button(type="submit").titleFilter__filter-btn.button-b Применить
+                    button(type="reset").button-g Сбросить

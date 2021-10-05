@@ -5,6 +5,7 @@
 @@include('files/popup.js')
 @@include('files/select.js')
 @@include('files/filter.js')
+@@include('files/password.js')
 
 
 //slider

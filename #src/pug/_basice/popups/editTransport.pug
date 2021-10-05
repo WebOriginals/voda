@@ -1,0 +1,65 @@
+.popup.popup-center.popup_popup4
+    .popup__body.custom-body
+        .popup__content.createTransport-content
+            a.popup__close.close-popup
+                img(src="img/icons/close.svg")
+            .modal-text
+                .modal-text__title Редактировать транспорт
+                form.modal-text__form(method="post" enctype="" autocomplete="off")
+                    .createTransport__form
+                        .editDataUser__row
+                            .form-row__title Наименование
+                            .form-row__right
+                                input.form-row__input
+                        .editDataUser__row
+                            .form-row__title Тип транспорта
+                            .form-row__right
+                                select.form__select(name='transport')
+                                    option(value='', selected) Не выбрано
+                                    option(value='type1') Тип 1
+                                    option(value='type1') Тип 1
+                        .editDataUser__row
+                            .form-row__title Участок 
+                            .form-row__right
+                                select.form__select(name='region')
+                                    option(value='', selected) Не выбрано
+                                    option(value='region1') Участок 1
+                                    option(value='region2') Участок 2
+                        
+
+                    .form__btns.form-btns
+                        button.form-btns__btn.button-b(type="submit") Сохранить
+                        button.form-btns__btn.button-g(type="reset") Отмена
+
+
+
+.popup__content.createTransport-content
+    a.popup__close.close-popup
+        img(src="img/icons/close.svg")
+    .modal-text
+        .modal-text__title Редактировать транспорт
+        form.modal-text__form(method="post" enctype="" autocomplete="off")
+            .createTransport__form
+                .editDataUser__row
+                    .form-row__title Наименование
+                    .form-row__right
+                        input.form-row__input
+                .editDataUser__row
+                    .form-row__title Тип транспорта
+                    .form-row__right
+                        select.form__select(name='transport')
+                            option(value='', selected) Не выбрано
+                            option(value='type1') Тип 1
+                            option(value='type1') Тип 1
+                .editDataUser__row
+                    .form-row__title Участок 
+                    .form-row__right
+                        select.form__select(name='region')
+                            option(value='', selected) Не выбрано
+                            option(value='region1') Участок 1
+                            option(value='region2') Участок 2
+                
+
+            .form__btns.form-btns
+                button.form-btns__btn.button-b(type="submit") Сохранить
+                button.form-btns__btn.button-g(type="reset") Отмена 

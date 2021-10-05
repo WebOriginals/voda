@@ -1,0 +1,43 @@
+section.titleFilter
+    ._container
+        .titleFilter__body
+            .titleFilter__name Назначение машины на бригаду
+            form.titleFilter__filter.transportFilter-body(method="post" enctype="" autocomplete="off")
+
+                .filter__input.filter-input
+                    .filter-input__wr
+                        .filter-input__title.filter-title ФИО
+                        .filter-input__body
+                            .wrapper-size(data-type="select")
+                                .wrapper-input
+
+                                    .choice-of-size.select-value  Не задано
+
+                                .ii-product__selectors-wrp.js_size_selector
+                                    .wrapper-list
+                                        .list
+                                            .list__itams(data-value="1") Иванов Иван Иванович
+                                            .list__itams(data-value="1") Иванов Иван Иванович
+                                            .list__itams(data-value="1") Иванов Иван Иванович
+                                            .list__itams(data-value="1") Иванов Иван Иванович
+
+
+                .filter__input.filter-input
+                    .filter-input__wr
+                        .filter-input__title.filter-title Статус
+                        .filter-input__body
+                            .wrapper-size(data-type="select")
+                                .wrapper-input
+                                    .choice-of-size.select-value  Не задано
+                                .ii-product__selectors-wrp.js_size_selector
+                                    .wrapper-list
+                                        .list
+                                            .list__itams(data-value="1") срочно
+                                            .list__itams(data-value="2") не срочно
+                                            .list__itams(data-value="3") можно жавтра
+                                            .list__itams(data-value="4") Сейчас
+
+
+
+                button(type="submit").titleFilter__filter-btn.button-b Применить
+                button(type="reset").button-g Сбросить
