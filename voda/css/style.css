@@ -3941,6 +3941,12 @@ textarea.input {
   gap: 30px;
 }
 
+.task-item__status {
+  font-size: 22px;
+  font-weight: 300;
+  color: #000;
+}
+
 .task-item__btn {
   width: 80px;
   height: 80px;
@@ -4045,10 +4051,6 @@ textarea.input {
   padding: 40px 0;
 }
 
-.task-process__hidden {
-  display: none;
-}
-
 .task-process__item {
   padding-left: 80px;
   position: relative;
@@ -4089,6 +4091,30 @@ textarea.input {
   font-weight: 500;
   font-size: 22px;
   color: #828282;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.task-process__photo-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  color: #000;
+  height: 26px;
 }
 
 .task-process__preview-success {
@@ -4102,6 +4128,19 @@ textarea.input {
           box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
   border-radius: 7px;
   padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.task-process__body1 {
+  padding: 0;
+  background: none;
 }
 
 .task-process__body-header {
@@ -4146,6 +4185,152 @@ textarea.input {
   color: #48BB3E;
   font-size: 22px;
   font-weight: 500;
+}
+
+.task-process__toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.task-process__toggle input {
+  display: none;
+}
+
+.task-process__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.task-process__slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.task-process input:checked + .task-process__slider:before {
+  -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+          transform: translateX(26px);
+}
+
+.task-process input:focus + .task-process__slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+.task-process input:checked + .task-process__slider {
+  background-color: #2196F3;
+}
+
+.task-process__hidden {
+  display: none;
+}
+
+.task-process__radiolist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.task-process__radiobutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-size: 22px;
+}
+
+.task-process__btn {
+  max-width: 100%;
+}
+
+.task-process__photo-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.task-process__photo-item {
+  width: 280px;
+  height: 212px;
+  position: relative;
+}
+
+.task-process__photo-del {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #FFF;
+  top: 10px;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.task-process__photo-del:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  border-radius: 3px;
+  background: #000;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.task-process__photo-del:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  border-radius: 3px;
+  background: #000;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.mobile__danger-btn {
+  background: #ED131A;
 }
 
 @media (min-width: 990px) {

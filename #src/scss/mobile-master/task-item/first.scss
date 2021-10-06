@@ -14,6 +14,11 @@
         align-items: center;
         gap: 30px;
     }
+    &__status{
+        font-size: 22px;
+        font-weight: 300;
+        color: #000;
+    }
     &__btn{
         width: 80px;
         height: 80px;

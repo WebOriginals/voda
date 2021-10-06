@@ -4,9 +4,7 @@
     flex-direction: column;
     gap: 30px;
     padding: 40px 0;
-    &__hidden{
-        display: none;
-    }
+
     &__item{
         padding-left: 80px;
         position: relative;
@@ -41,6 +39,17 @@
         font-weight: 500;
         font-size: 22px;
         color: #828282;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__photo-count{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #000;
+        height: 26px;
     }
     &__preview-success{
         color: black;
@@ -51,6 +60,13 @@
         box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
         border-radius: 7px;
         padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__body1{
+        padding: 0;
+        background: none;
     }
     &__body-header{
         display: flex;
@@ -80,5 +96,105 @@
         font-size: 22px;
         font-weight: 500;
     }
-
+    &__toggle{
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    &__toggle input{
+        display: none;
+    }
+    &__slider{
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 34px;
+    }
+    &__slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+      }
+      input:checked + .task-process__slider:before{
+        transform: translateX(26px);
+      }
+      input:focus + .task-process__slider{
+        box-shadow: 0 0 1px #2196F3;
+      }
+      input:checked + .task-process__slider{
+        background-color: #2196F3;
+      }
+      &__hidden{
+        display: none;
+    }
+    &__radiolist{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__radiobutton{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 22px;
+    }
+    &__btn{
+        max-width: 100%
+    }
+    &__photo-preview{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    &__photo-item{
+        width: 280px;
+        height: 212px;
+        position: relative;
+    }
+    &__photo-del{
+        position: absolute;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #FFF;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 4px;
+            border-radius: 3px;
+            background: #000;
+            transform: rotate(45deg);
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 4px;
+            border-radius: 3px;
+            background: #000;
+            transform: rotate(-45deg);
+        }
+    }
+}
+.mobile__danger-btn{
+    background: #ED131A;
 }
