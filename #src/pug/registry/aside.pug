@@ -50,22 +50,21 @@ aside.aside
                                     label(for='Tractor') Трактор
 
     .aside__transports
-        .aside__transport.aside-transport(draggable="true" data-id="1")
+        .aside__transport.aside-transport(draggable="true" data-item-id="1" )
             .aside-transport__name Бульдозер АА 505
             .aside-transport__status
                 svg(width='8', height='8', viewbox='0 0 8 8', fill='none', xmlns='http://www.w3.org/2000/svg')
                     circle(cx='4', cy='4', r='4', fill='#48BB3E')
                 span  Свободен
             .aside-transport__address Коминтерновский, 19 квартал, 21
-        .aside__transport.aside-transport(draggable="true" data-id="2")
-            .aside-transport__name Бульдозер АА 505
+        .aside__transport.aside-transport(draggable="true" data-item-id="2")
+            .aside-transport__name Кран АА 404
             .aside-transport__status
                 svg(width='8', height='8', viewbox='0 0 8 8', fill='none', xmlns='http://www.w3.org/2000/svg')
                     circle(cx='4', cy='4', r='4', fill='#ED131A')
-
-                span  Свободен
+                span Занят
             .aside-transport__address Коминтерновский, 19 квартал, 21
-        .aside__transport.aside-transport
+        .aside__transport.aside-transport(draggable="true" data-item-id="3")
             .aside-transport__name Бульдозер АА 505
             .aside-transport__status
                 svg(width='8', height='8', viewbox='0 0 8 8', fill='none', xmlns='http://www.w3.org/2000/svg')

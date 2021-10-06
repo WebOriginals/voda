@@ -1,5 +1,5 @@
 .table-grid-registry{
-  grid-template-columns: 80px 80px 160px 150px 1fr 1fr 1.5fr 100px;
+  grid-template-columns: 80px 80px 160px 150px 1fr 1fr 1.5fr 135px;
   grid-gap: 30px;
   padding: 20px;
   align-items: center;
@@ -7,7 +7,14 @@
   border-radius: 10px;
   margin-bottom: 10px;
   display: grid;
-
+  *:not(:last-child){
+    pointer-events: none;
+  }
+  .table-bottom-row__element{
+    .confirm{
+      display: none;
+    }
+  }
   .table-bottom-row__element:nth-child(1){
     display: grid;
     grid-gap: 10px;
@@ -19,7 +26,7 @@
   }
 }
 .table-grid-registry-top{
-  grid-template-columns: 80px 80px 160px 1fr 1fr 1fr 1.5fr 100px;
+  grid-template-columns: 80px 80px 160px 1fr 1fr 1fr 1.5fr 135px;
   grid-gap: 30px;
   padding: 20px;
   align-items: center;
@@ -29,10 +36,16 @@
 .table-grid-registry-green{
   border: 1px solid $color_6;
   background: lighten($color_6, 65);
+  .confirm{
+    display: block !important;
+  }
 }
 .table-grid-registry-ellowe{
   border: 1px solid $color_7;
   background: lighten($color_7, 45);
+  .confirm{
+    display: block !important;
+  }
 }
 .table-grid-registry-rad-border{
   border-left: 5px solid $color_5;
