@@ -502,18 +502,6 @@ for(serchElemrnt of serchElemrnts){
 
 
 
-document.querySelector("body").addEventListener("click",(e)=>{
-        if (e.target.classList.contains("password-control")){
-            let newTarget = document.querySelector(`.${e.target.dataset.targetPassword}`);
-            if (newTarget.getAttribute('type') == 'password') {
-                e.target.classList.add('view');
-                newTarget.setAttribute('type', 'text');
-            } else {
-                e.target.classList.remove('view');
-                newTarget.setAttribute('type', 'password');
-            }
-        }  
-    })
 if(document.querySelector('.mobile-filter')){
     document.querySelector('.mobile-filter').addEventListener("click",(e)=>{
         if(e.target.classList.contains("mobile-filter__tab-button")){
@@ -529,48 +517,76 @@ if (document.querySelector(".task-process")){
     const processItems = document.querySelectorAll(".task-process__item");
     let position = 0;
     let thisBody;
-    let thisPreview;
-    let thisPagination;
+
     function aaa(position){
-        thisPagination = document.querySelectorAll(".task-process__pagination")[position]
-        thisPreview = document.querySelectorAll(".task-process__preview")[position]
         thisBody = document.querySelectorAll(".task-process__body")[position]
-        thisPagination.classList.remove("task-process__pagination-lock");
-        thisPagination.classList.add("task-process__pagination-active");
-        thisPreview.classList.toggle("task-process__hidden");
-        thisBody.classList.toggle("task-process__hidden");
-        
+        processItems[position].classList.remove("task-process__item-lock");
+        processItems[position].classList.add("task-process__item-active");
     }
+
     if(processItems){
         
         aaa(position)
         
         document.querySelector(".task-process").addEventListener("click",(e)=>{
             if (e.target.classList.contains("nextBlock")&&e.target.parentNode.isEqualNode(thisBody)){
-                thisPagination.classList.remove("task-process__pagination-active");
-                thisPagination.classList.add("task-process__pagination-success");
-                thisPreview.classList.toggle("task-process__hidden");
-                thisPreview.classList.toggle("task-process__preview-success");
-                thisBody.classList.toggle("task-process__hidden");
+                processItems[position].classList.remove("task-process__item-active");
+                processItems[position].classList.add("task-process__item-success");
                 position++;
                 aaa(position)
             }
         })
         
-
     }
-   
-
-
-
-
-
-
-
-
 }
 
 
+if (document.querySelector(".task-process")){
+
+    const process = document.querySelector(".task-process");
+    const processItems = document.querySelectorAll(".task-process__item");
+    let position = 0;
+    let thisBody;
+
+    function aaa(position){
+        thisBody = document.querySelectorAll(".task-process__body")[position]
+        processItems[position].classList.remove("task-process__item-lock");
+        processItems[position].classList.add("task-process__item-active");
+    }
+
+    if(processItems){
+        
+        aaa(position)
+        
+        document.querySelector(".task-process").addEventListener("click",(e)=>{
+            if (e.target.classList.contains("nextBlock")&&e.target.parentNode.isEqualNode(thisBody)){
+                processItems[position].classList.remove("task-process__item-active");
+                processItems[position].classList.add("task-process__item-success");
+                position++;
+                aaa(position)
+            }
+        })
+        
+    }
+}
+
+
+if(document.querySelector(".newpassword")&&document.querySelector(".repeatpassword")){
+    const pass = document.querySelector(".newpassword");
+    const passrep = document.querySelector(".repeatpassword");
+    const passmess = document.querySelector(".error-password-message");
+    passrep.addEventListener("keyup",()=>{
+        if(passrep.value.length>=pass.value.length&&passrep.value!==pass.value){
+            passrep.classList.add("error-password");
+            passmess.classList.add("pass-watch");
+        }
+        else{
+            passrep.classList.remove("error-password");
+            passmess.classList.remove("pass-watch");
+        }
+    })
+    
+}
 
 //slider
 if (document.querySelector('.applications__container')) {

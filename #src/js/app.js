@@ -5,9 +5,10 @@
 @@include('files/popup.js')
 @@include('files/select.js')
 @@include('files/filter.js')
-@@include('files/password.js')
 @@include('files/mobile-filter.js')
 @@include('files/task-process.js')
+@@include('files/task-process.js')
+@@include('files/checkpassword.js')
 
 //slider
 @@include('files/sliders/first.js')

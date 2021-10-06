@@ -8,6 +8,46 @@
     &__item{
         padding-left: 80px;
         position: relative;
+
+        &-active{
+            .task-process__pagination{
+                border: 2px solid #48BB3E;
+                background-image: url("../img/icons/Ellipse.svg");
+            }
+            .task-process__preview{
+                display: none;
+            }
+            .task-process__body{
+                display: flex;
+
+            }
+        }
+        &-lock{
+            .task-process__pagination{
+                background-image: url("../img/icons/lock.svg");   
+            }
+            .task-process__preview{
+                display: flex;
+            }
+            .task-process__body{
+                display: none;
+            }
+        }
+        &-success{
+            .task-process__pagination{
+                background-image: url("../img/icons/success.svg");
+            }
+            .task-process__preview {
+                display: flex;
+                .task-process__photo-count{
+                    display: flex;
+                }
+            }
+            .task-process__body{
+                display: none;
+            }
+        }
+
     }
     &__pagination{
         position: absolute;
@@ -20,16 +60,7 @@
         background-position: center center;
         background-repeat: no-repeat;
     }
-    &__pagination-active{
-        border: 2px solid #48BB3E;
-        background-image: url("../img/icons/Ellipse.svg");
-    }
-    &__pagination-lock{
-        background-image: url("../img/icons/lock.svg");   
-    }
-    &__pagination-success{
-        background-image: url("../img/icons/success.svg");
-    }
+    
     &__preview{
         background: #FFFFFF;
         box-shadow: 0px 0px 30px rgba(110, 88, 88, 0.05);
@@ -44,7 +75,7 @@
         align-items: center;
     }
     &__photo-count{
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         gap: 10px;
@@ -99,8 +130,9 @@
     &__toggle{
         position: relative;
         display: inline-block;
-        width: 60px;
-        height: 34px;
+        width: 580px;
+        height: 90px;
+        border-radius: 50px;
     }
     &__toggle input{
         display: none;
@@ -112,30 +144,49 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #ccc;
+        background-color: #FBD0D1;
         transition: .4s;
-        border-radius: 34px;
+        border-radius: 50px;
+        z-index: 1;
     }
     &__slider:before {
         position: absolute;
         content: "";
-        height: 26px;
-        width: 26px;
-        left: 4px;
-        bottom: 4px;
+        height: 70px;
+        width: 285px;
+        top: 50%;
+        left: 10px;
+        transform: translate(0,-50%);
         background-color: white;
         -webkit-transition: .4s;
         transition: .4s;
-        border-radius: 50%;
+        border-radius: 50px;
+        z-index: 4;
+      }
+      &__slider:after{
+        content: "ХВС ЗАКРЫТО";
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        right: 75px;
+        transform: translate(0,-50%);
+        font-size: 22px;
+        font-weight: 500;
+        color: #ED131A;
       }
       input:checked + .task-process__slider:before{
-        transform: translateX(26px);
+        transform: translate(275px,-50%);
+      }
+      input:checked + .task-process__slider:after{
+          content: "ХВС Открыто";
+          color: #2196F3;
+          left: 75px;
       }
       input:focus + .task-process__slider{
         box-shadow: 0 0 1px #2196F3;
       }
       input:checked + .task-process__slider{
-        background-color: #2196F3;
+        background-color: #CCE3F2;
       }
       &__hidden{
         display: none;
