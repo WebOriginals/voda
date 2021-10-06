@@ -2548,10 +2548,15 @@ textarea.input {
 .aside-transport {
   padding: 20px;
   border-bottom: 2px solid #E5E5E5;
+  background-color: #fff;
 }
 
 .aside-transport svg {
   margin-right: 3px;
+}
+
+.aside-transport.active {
+  background-color: #00aced;
 }
 
 .aside-transport__name {
@@ -2636,6 +2641,11 @@ textarea.input {
 
 .table-grid-registry-rad-border {
   border-left: 5px solid #ED131A;
+}
+
+.table-grid-registry-blue {
+  border: 1px solid #0072BC;
+  background: #d6efff !important;
 }
 
 .transportFilter-body {

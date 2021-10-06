@@ -9,6 +9,7 @@
 @@include('files/filter.js')
 @@include('files/password.js')
 @@include('files/mobile-filter.js')
+@@include('files/dragdrop.js')
 
 //slider
 @@include('files/sliders/first.js')
