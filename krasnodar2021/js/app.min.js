@@ -268,7 +268,6 @@ function select_init(select) {
     const select_parent = select.parentElement;
     const select_modifikator = select.getAttribute('name');
     const select_selected_option = select.querySelector('option:checked');
-    console.log(select_selected_option);
     select.setAttribute('data-default', select_selected_option.value);
 
     select.style.display = 'none';

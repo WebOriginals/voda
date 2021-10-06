@@ -862,7 +862,7 @@ body.lock {
   grid-template-columns: 250px 1fr auto;
 }
 
-.form__transport td .form-row:nth-child(2) .form-row__right {
+.form__transport td .form-row:nth-child(3) .form-row__right {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 200px 120px;
@@ -873,7 +873,7 @@ body.lock {
           align-items: center;
 }
 
-.form__transport td .form-row:nth-child(3) .form-row__right {
+.form__transport td .form-row:nth-child(4) .form-row__right {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 120px auto;
@@ -889,7 +889,7 @@ body.lock {
   grid-template-columns: 250px 1fr auto;
 }
 
-.form__transport .form-row:nth-child(2) .form-row__right {
+.form__transport .form-row:nth-child(3) .form-row__right {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 200px 120px;
@@ -900,7 +900,7 @@ body.lock {
           align-items: center;
 }
 
-.form__transport .form-row:nth-child(3) .form-row__right {
+.form__transport .form-row:nth-child(4) .form-row__right {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 120px auto;
@@ -991,7 +991,11 @@ body.lock {
   width: 100%;
 }
 
-.modal-text__form .list__itams label {
+.multiselect-option .form-check {
+  padding: 0 5px 0 0px !important;
+}
+
+.multiselect-option .form-check label {
   display: block;
   cursor: pointer;
   position: relative;
@@ -999,7 +1003,7 @@ body.lock {
   padding: 10px;
 }
 
-.modal-text__form .list__itams label:before {
+.multiselect-option .form-check label:before {
   content: "";
   display: inline-block;
   width: 18px;
@@ -1012,15 +1016,15 @@ body.lock {
   border-radius: 3px;
 }
 
-.modal-text__form .list__itams input[type=checkbox] {
+.multiselect-option .form-check input[type=checkbox] {
   display: none;
 }
 
-.modal-text__form .list__itams .checkbox label:before {
+.multiselect-option .form-check .checkbox label:before {
   border-radius: 3px;
 }
 
-.modal-text__form .list__itams input[type=checkbox]:checked + label:before {
+.multiselect-option .form-check input[type=checkbox]:checked + label:before {
   content: "✓";
   font-size: 15px;
   color: #f3f3f3;
@@ -1028,8 +1032,37 @@ body.lock {
   line-height: 15px;
 }
 
-.modal-text__form .list__itams input[type=checkbox]:checked + label {
+.multiselect-option .form-check input[type=checkbox]:checked + label {
   background-color: #eff9ff;
+}
+
+.form-row__right .btn-group {
+  width: 100%;
+}
+
+.form-row__right .custom-select {
+  border: 1px solid #888;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 300;
+  width: 100%;
+  height: 48px;
+  text-align: left !important;
+}
+
+.form-row__right .custom-select span {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.form-row__right .multiselect-container {
+  width: 100%;
+}
+
+.form-row__right .multiselect-container .dropdown-item.active,
+.form-row__right .multiselect-container .dropdown-item:hover {
+  background-color: #eff9ff !important;
 }
 
 .urgently label {
@@ -3012,7 +3045,11 @@ textarea.input {
 
 .table-bottom-row__element {
   border: none !important;
-  padding: 0;
+  padding: 0 !important;
+}
+
+.table-top__element {
+  padding: 0 !important;
 }
 
 .table-grid-registry {
