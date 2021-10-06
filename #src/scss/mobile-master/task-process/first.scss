@@ -245,6 +245,103 @@
             transform: rotate(-45deg);
         }
     }
+    &__complete{
+        padding-left: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+    }
+    
+    &__complete-title{
+        font-size: 22px;
+        font-weight: 500;
+    }
+    &__complete-header{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 22px;
+        font-weight: 500;
+        color: #0072BC;
+        gap: 20px;
+    }
+    &__complete-icon{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #0072BC;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            background: #00558C;
+        }
+    }
+    &__complete-table{
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        grid-gap: 20px;
+        align-items: center;
+        font-size: 22px;
+    }
+    &__complete-input-block{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+    }
+    &__complete-check{
+        position: relative;
+        input[type=checkbox]{
+            display: none;
+        }
+        input[type=checkbox]+input::before{
+            top: -5px;
+        }
+        label{
+            font-size: 22px;
+            display: block;
+            cursor: pointer;
+            padding-left: 40px;
+            position: relative;
+        }
+        label:before{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            border-radius: 3px;
+            border: 1px solid #000;
+            width: 30px;
+            height: 30px;
+            left: 0;
+            top: 50%;
+            transform: translate(0,-50%);
+        }
+        input[type=checkbox]:checked+label::before{
+            content: "✓";
+            font-size: 30px;
+            line-height: 30px;
+            border: none;
+            color: #F3F3F3;
+            background: #0072BC;
+        }
+       
+    }
+    &__complete-input{
+        font-size: 22px;
+        height: 80px;
+        width: 140px;
+        border-radius: 7px;
+        border: 1px solid #BDBDBD;
+        background: #FFFFFF;
+    }
+    &__complete-report{
+        font-size: 22px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 100px;
+    }
 }
 .mobile__danger-btn{
     background: #ED131A;

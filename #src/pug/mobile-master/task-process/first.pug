@@ -76,9 +76,16 @@ section.task-item
                                 svg.task-process__icon(width="34", height="34", viewBox="0 0 34 34", fill="none", xmlns="http://www.w3.org/2000/svg")
                                     path(d="M29.9351 8.13034H26.3873L24.4286 5.17382C23.6894 4.06512 22.396 3.3999 21.0655 3.3999H12.9351C11.6047 3.3999 10.3112 4.06512 9.57204 5.17382L7.61335 8.13034H4.06552C1.81117 8.13034 0.000305176 9.94121 0.000305176 12.1956V26.5347C0.000305176 28.789 1.81117 30.5999 4.06552 30.5999H29.9351C32.1894 30.5999 34.0003 28.789 34.0003 26.5347V12.1956C34.0003 9.94121 32.1894 8.13034 29.9351 8.13034ZM17.0003 27.2738C11.9373 27.2738 7.83509 23.1716 7.83509 18.1086C7.83509 13.0456 11.9373 8.98034 17.0003 8.98034C22.0633 8.98034 26.1655 13.0825 26.1655 18.1456C26.1655 23.1716 22.0633 27.2738 17.0003 27.2738ZM29.4177 13.8586C29.3807 13.8586 29.3438 13.8586 29.2699 13.8586H27.7916C27.1264 13.8216 26.609 13.2673 26.646 12.6021C26.6829 11.9738 27.1633 11.4934 27.7916 11.4564H29.2699C29.9351 11.4195 30.4894 11.9369 30.5264 12.6021C30.5633 13.2673 30.0829 13.8216 29.4177 13.8586Z", fill="#656565")
                                     path(d="M17.0003 13.0457C14.1916 13.0457 11.9003 15.337 11.9003 18.1457C11.9003 20.9544 14.1916 23.2087 17.0003 23.2087C19.809 23.2087 22.1003 20.9174 22.1003 18.1087C22.1003 15.3 19.809 13.0457 17.0003 13.0457Z", fill="#656565")
+                    .task-process__photo-preview
+                        .task-process__photo-item 
+                            img(src="img/photo-example.webp", alt="")
+                            button(type="button").task-process__photo-del
+                        .task-process__photo-item 
+                            img(src="img/photo-example.webp", alt="")
+                            button(type="button").task-process__photo-del  
                     .task-process__toggle 
                         input(id="task-process__slider1",type="checkbox" checked="true")
-                        label(for="task-process__slider1").task-process__slider
+                        label(for="task-process__slider1").task-process__slider  
                     button.mobile__btn.task-process__btn.mobile-filter__reset.nextBlock Земельные работы не требуются
                     button.mobile__btn.task-process__btn.mobile__success-btn.nextBlock Завершено
                     button.mobile__btn.task-process__btn.mobile__danger-btn.nextBlock Требуется продолжение работ
@@ -95,6 +102,13 @@ section.task-item
                                 svg.task-process__icon(width="34", height="34", viewBox="0 0 34 34", fill="none", xmlns="http://www.w3.org/2000/svg")
                                     path(d="M29.9351 8.13034H26.3873L24.4286 5.17382C23.6894 4.06512 22.396 3.3999 21.0655 3.3999H12.9351C11.6047 3.3999 10.3112 4.06512 9.57204 5.17382L7.61335 8.13034H4.06552C1.81117 8.13034 0.000305176 9.94121 0.000305176 12.1956V26.5347C0.000305176 28.789 1.81117 30.5999 4.06552 30.5999H29.9351C32.1894 30.5999 34.0003 28.789 34.0003 26.5347V12.1956C34.0003 9.94121 32.1894 8.13034 29.9351 8.13034ZM17.0003 27.2738C11.9373 27.2738 7.83509 23.1716 7.83509 18.1086C7.83509 13.0456 11.9373 8.98034 17.0003 8.98034C22.0633 8.98034 26.1655 13.0825 26.1655 18.1456C26.1655 23.1716 22.0633 27.2738 17.0003 27.2738ZM29.4177 13.8586C29.3807 13.8586 29.3438 13.8586 29.2699 13.8586H27.7916C27.1264 13.8216 26.609 13.2673 26.646 12.6021C26.6829 11.9738 27.1633 11.4934 27.7916 11.4564H29.2699C29.9351 11.4195 30.4894 11.9369 30.5264 12.6021C30.5633 13.2673 30.0829 13.8216 29.4177 13.8586Z", fill="#656565")
                                     path(d="M17.0003 13.0457C14.1916 13.0457 11.9003 15.337 11.9003 18.1457C11.9003 20.9544 14.1916 23.2087 17.0003 23.2087C19.809 23.2087 22.1003 20.9174 22.1003 18.1087C22.1003 15.3 19.809 13.0457 17.0003 13.0457Z", fill="#656565")
+                    .task-process__photo-preview
+                        .task-process__photo-item 
+                            img(src="img/photo-example.webp", alt="")
+                            button(type="button").task-process__photo-del
+                        .task-process__photo-item 
+                            img(src="img/photo-example.webp", alt="")
+                            button(type="button").task-process__photo-del  
                     .task-process__toggle 
                         input(id="task-process__slider2",type="checkbox" checked="true")
                         label(for="task-process__slider2").task-process__slider
@@ -127,12 +141,43 @@ section.task-item
                 .task-process__body
                     .task-process__complete-title Завершено благоустройство ЦРС
                     .task-process__complete-table 
-                        .form-row__right.urgently.task-process__complete-check
-                            input#urgently(type='checkbox', name='urgently')
-                            label(for='urgently') Асфальтобетонное покрытие
-                        .task-process__complete-input 
+                        .task-process__complete-check
+                            input#task-complete1(type='checkbox', name='urgently')
+                            label(for='task-complete1') Асфальтобетонное покрытие
+                        .task-process__complete-input-block
                             span S 
-                            input(type="text")
+                            input(type="text").task-process__complete-input
+                            span м<sup>2</sup>
 
+                        .task-process__complete-check
+                            input#task-complete2(type='checkbox', name='urgently')
+                            label(for='task-complete2') Грунт
+                        .task-process__complete-input-block
+                            span S 
+                            input(type="text").task-process__complete-input
+                            span м<sup>2</sup>
 
-            
+                        .task-process__complete-check
+                            input#task-complete3(type='checkbox', name='urgently')
+                            label(for='task-complete3') Газон
+                        .task-process__complete-input-block
+                            span S 
+                            input(type="text").task-process__complete-input
+                            span м<sup>2</sup>
+
+                        .task-process__complete-check
+                            input#task-complete4(type='checkbox', name='urgently')
+                            label(for='task-complete4') Бордюр
+                        .task-process__complete-input-block
+                            span L
+                            input(type="text").task-process__complete-input
+                            span м<sup>2</sup>
+                    button.mobile__btn.task-process__btn.mobile__blue-btn Создать
+                
+                .task-process__body
+                    .task-process__complete-title Завершено благоустройство ЦРС
+                    .task-process__complete-report
+                        span Асфальтобетонное покрытие
+                        span 120 м<sup>2</sup>
+                        span Тротуарная плитка
+                        span 80 м<sup>2</sup>

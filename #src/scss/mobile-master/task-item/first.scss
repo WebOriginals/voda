@@ -80,3 +80,9 @@
 .mobile__success-btn{
     background: #48BB3E;
 }
+.mobile__blue-btn{
+    background: #0072BC;
+    &:hover{
+        background: #00558C;
+    }
+}
