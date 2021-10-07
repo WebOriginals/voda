@@ -47,7 +47,7 @@ let _slideDown = (target, duration = 500) => {
     target.offsetHeight;
     target.style.transitionProperty = "height, margin, padding";
     target.style.transitionDuration = duration + 'ms';
-    target.style.height = height + 'px';
+    target.style.height = height +'px';
     target.style.removeProperty('padding-top');
     target.style.removeProperty('padding-bottom');
     target.style.removeProperty('margin-top');
@@ -83,6 +83,7 @@ function selects_init() {
     //select_callback();
     document.addEventListener('click', function (e) {
         selects_close(e);
+        
     });
     document.addEventListener('keydown', function (e) {
         if (e.which == 27) {
@@ -179,15 +180,17 @@ function select_actions(original, select) {
         }
         _slideToggle(select_body_options, 100, event);
         select.classList.toggle('_active');
+       
         document.querySelectorAll(".serch-option").forEach(el=>{
             if(hasClassedParent(el, "_active")){
-                console.log(el);
-                el.value='';
-                el.focus();
+                el.focus({
+                    preventScroll: true
+                  });
             }
         })
+        
     });
-
+ 
     for (let index = 0; index < select_options.length; index++) {
         const select_option = select_options[index];
         const select_option_value = select_option.getAttribute('data-value');

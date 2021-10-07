@@ -1,0 +1,16 @@
+.popup.popup-center.popup_popup4
+    .popup__body.comment-photo__popup
+        .comment-photo
+            a.close-popup.popup__close
+                svg(width="80", height="80", viewBox="0 0 80 80", fill="none", xmlns="http://www.w3.org/2000/svg")
+                    circle(cx="40", cy="40", r="40", transform="rotate(180 40 40)", fill="white")
+                    path(fill-rule="evenodd", clip-rule="evenodd", d="M57 39.8024C57 40.6308 56.3284 41.3024 55.5 41.3024L27.6034 41.3024L32.5709 47.5682C33.0856 48.2173 32.9766 49.1608 32.3274 49.6755C31.6782 50.1901 30.7348 50.0811 30.2201 49.4319L22.5684 39.7804L30.2416 30.5417C30.7709 29.9044 31.7166 29.8168 32.3539 30.3461C32.9912 30.8754 33.0787 31.8211 32.5494 32.4584L27.6957 38.3024L55.5 38.3024C56.3284 38.3024 57 38.9739 57 39.8024Z", fill="black")
+
+            .comment-photo__img 
+                img(src="img/photo-example.webp", alt="")
+            .comment-photo__new-comment 
+                .comment-photo__text-block
+                    span.comment-photo__text-hint Добавить комментарий
+                    textarea(type="text" placeholder="Сообщение").task-comment__input-text    
+                button.mobile__btn.task-process__btn.mobile__success-btn Сохранить
+                

@@ -1,4 +1,4 @@
-if (document.querySelector(".task-process")){
+/*if (document.querySelector(".task-process")){
 
     const process = document.querySelector(".task-process");
     const processItems = document.querySelectorAll(".task-process__item");
@@ -27,3 +27,4 @@ if (document.querySelector(".task-process")){
     }
 }
 
+*/

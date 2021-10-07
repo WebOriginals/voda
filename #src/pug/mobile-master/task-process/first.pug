@@ -15,21 +15,40 @@ section.task-item
         .task-item__status Статус: Принята
         
         .task-process
-            .task-process__item 
+            .task-process__item.task-process__item-success
                 .task-process__pagination
                 .task-process__preview 
-                    span Прибыли на место
+                    .task-process__preview-header
+                        span Прибыли на место
+                    
                 .task-process__body.task-process__body1
                     button.mobile__btn.mobile__success-btn.nextBlock Прибыли на место
-            .task-process__item.task-process__item-lock 
+            .task-process__item.task-process__item-success
                 .task-process__pagination
-                .task-process__preview 
-                    span Препятствия
-                    .task-process__photo-count 
-                        svg(width="26", height="22", viewBox="0 0 26 22", fill="none", xmlns="http://www.w3.org/2000/svg")
-                            path(d="M22.8913 4.21749H20.1783L18.6804 1.95662C18.1152 1.10879 17.1261 0.600098 16.1087 0.600098H9.8913C8.87391 0.600098 7.88478 1.10879 7.31957 1.95662L5.82174 4.21749H3.1087C1.38478 4.21749 0 5.60227 0 7.32618V18.2914C0 20.0153 1.38478 21.4001 3.1087 21.4001H22.8913C24.6152 21.4001 26 20.0153 26 18.2914V7.32618C26 5.60227 24.6152 4.21749 22.8913 4.21749ZM13 18.8566C9.12826 18.8566 5.9913 15.7197 5.9913 11.8479C5.9913 7.97618 9.12826 4.86749 13 4.86749C16.8717 4.86749 20.0087 8.00445 20.0087 11.8762C20.0087 15.7197 16.8717 18.8566 13 18.8566ZM22.4957 8.59792C22.4674 8.59792 22.4391 8.59792 22.3826 8.59792H21.2522C20.7435 8.56966 20.3478 8.14575 20.3761 7.63705C20.4043 7.15662 20.7717 6.78923 21.2522 6.76097H22.3826C22.8913 6.73271 23.3152 7.12836 23.3435 7.63705C23.3717 8.14575 23.0043 8.56966 22.4957 8.59792Z", fill="#656565")
-                            path(d="M13.0001 7.97607C10.8523 7.97607 9.1001 9.72825 9.1001 11.8761C9.1001 14.0239 10.8523 15.7478 13.0001 15.7478C15.1479 15.7478 16.9001 13.9956 16.9001 11.8478C16.9001 9.69999 15.1479 7.97607 13.0001 7.97607Z", fill="#656565")
-                        span 2
+                .task-process__preview
+                    .task-process__preview-header
+                        span Препятствия
+                        .task-process__photo-count 
+                            svg(width="26", height="22", viewBox="0 0 26 22", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                path(d="M22.8913 4.21749H20.1783L18.6804 1.95662C18.1152 1.10879 17.1261 0.600098 16.1087 0.600098H9.8913C8.87391 0.600098 7.88478 1.10879 7.31957 1.95662L5.82174 4.21749H3.1087C1.38478 4.21749 0 5.60227 0 7.32618V18.2914C0 20.0153 1.38478 21.4001 3.1087 21.4001H22.8913C24.6152 21.4001 26 20.0153 26 18.2914V7.32618C26 5.60227 24.6152 4.21749 22.8913 4.21749ZM13 18.8566C9.12826 18.8566 5.9913 15.7197 5.9913 11.8479C5.9913 7.97618 9.12826 4.86749 13 4.86749C16.8717 4.86749 20.0087 8.00445 20.0087 11.8762C20.0087 15.7197 16.8717 18.8566 13 18.8566ZM22.4957 8.59792C22.4674 8.59792 22.4391 8.59792 22.3826 8.59792H21.2522C20.7435 8.56966 20.3478 8.14575 20.3761 7.63705C20.4043 7.15662 20.7717 6.78923 21.2522 6.76097H22.3826C22.8913 6.73271 23.3152 7.12836 23.3435 7.63705C23.3717 8.14575 23.0043 8.56966 22.4957 8.59792Z", fill="#656565")
+                                path(d="M13.0001 7.97607C10.8523 7.97607 9.1001 9.72825 9.1001 11.8761C9.1001 14.0239 10.8523 15.7478 13.0001 15.7478C15.1479 15.7478 16.9001 13.9956 16.9001 11.8478C16.9001 9.69999 15.1479 7.97607 13.0001 7.97607Z", fill="#656565")
+                            span 2
+                    .task-process__photo-preview
+                        .task-process__photo-item 
+                            .task-process__photo-item-img
+                                a(href="#popup4")._popup-link
+                                    img(src="img/photo-example.webp", alt="")
+                                button(type="button").task-process__photo-del
+                            p.task-process__photo-comment Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            
+                        .task-process__photo-item 
+                            .task-process__photo-item-img
+                                a(href="#popup4")._popup-link
+                                    img(src="img/photo-example.webp", alt="")
+                                button(type="button").task-process__photo-del     
+                            p.task-process__photo-comment Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                       
+
                 .task-process__body
                     .task-process__body-header 
                         .task-process__body-title Препятствия
@@ -54,19 +73,46 @@ section.task-item
                             span Другое
                     .task-process__photo-preview
                         .task-process__photo-item 
-                            img(src="img/photo-example.webp", alt="")
-                            button(type="button").task-process__photo-del
+                            .task-process__photo-item-img
+                                a(href="#popup4")._popup-link
+                                    img(src="img/photo-example.webp", alt="")
+                                button(type="button").task-process__photo-del
+                            p.task-process__photo-comment Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            
                         .task-process__photo-item 
-                            img(src="img/photo-example.webp", alt="")
-                            button(type="button").task-process__photo-del    
+                            .task-process__photo-item-img
+                                a(href="#popup4")._popup-link
+                                    img(src="img/photo-example.webp", alt="")
+                                button(type="button").task-process__photo-del     
+                            p.task-process__photo-comment Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                  
                     button.mobile__btn.task-process__btn.mobile-filter__reset.nextBlock Препятствий нет
-                    button.mobile__btn.task-process__btn.mobile__success-btn.nextBlock Устранено
+                    button.mobile__btn.task-process__btn.mobile__success-btn-lock.nextBlock Устранено
                     button.mobile__btn.task-process__btn.mobile__danger-btn.nextBlock Не устранено
-            .task-process__item.task-process__item-lock 
+            .task-process__item.task-process__item-active
                 .task-process__pagination
                 .task-process__preview 
-                    span Земельные работы
+                    .task-process__preview-header
+                        span Земельные работы
+                        .task-process__photo-count 
+                            svg(width="26", height="22", viewBox="0 0 26 22", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                path(d="M22.8913 4.21749H20.1783L18.6804 1.95662C18.1152 1.10879 17.1261 0.600098 16.1087 0.600098H9.8913C8.87391 0.600098 7.88478 1.10879 7.31957 1.95662L5.82174 4.21749H3.1087C1.38478 4.21749 0 5.60227 0 7.32618V18.2914C0 20.0153 1.38478 21.4001 3.1087 21.4001H22.8913C24.6152 21.4001 26 20.0153 26 18.2914V7.32618C26 5.60227 24.6152 4.21749 22.8913 4.21749ZM13 18.8566C9.12826 18.8566 5.9913 15.7197 5.9913 11.8479C5.9913 7.97618 9.12826 4.86749 13 4.86749C16.8717 4.86749 20.0087 8.00445 20.0087 11.8762C20.0087 15.7197 16.8717 18.8566 13 18.8566ZM22.4957 8.59792C22.4674 8.59792 22.4391 8.59792 22.3826 8.59792H21.2522C20.7435 8.56966 20.3478 8.14575 20.3761 7.63705C20.4043 7.15662 20.7717 6.78923 21.2522 6.76097H22.3826C22.8913 6.73271 23.3152 7.12836 23.3435 7.63705C23.3717 8.14575 23.0043 8.56966 22.4957 8.59792Z", fill="#656565")
+                                path(d="M13.0001 7.97607C10.8523 7.97607 9.1001 9.72825 9.1001 11.8761C9.1001 14.0239 10.8523 15.7478 13.0001 15.7478C15.1479 15.7478 16.9001 13.9956 16.9001 11.8478C16.9001 9.69999 15.1479 7.97607 13.0001 7.97607Z", fill="#656565")
+                            span 2
+                    .task-process__photo-preview
+                        .task-process__photo-item 
+                            .task-process__photo-item-img
+                                a(href="#popup4")._popup-link
+                                    img(src="img/photo-example.webp", alt="")
+                                button(type="button").task-process__photo-del
+                            p.task-process__photo-comment Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            
+                        .task-process__photo-item 
+                            .task-process__photo-item-img
+                                a(href="#popup4")._popup-link
+                                    img(src="img/photo-example.webp", alt="")
+                                button(type="button").task-process__photo-del     
+                            p.task-process__photo-comment Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 .task-process__body
                     .task-process__body-header 
                         .task-process__body-title Земельные работы
@@ -78,11 +124,18 @@ section.task-item
                                     path(d="M17.0003 13.0457C14.1916 13.0457 11.9003 15.337 11.9003 18.1457C11.9003 20.9544 14.1916 23.2087 17.0003 23.2087C19.809 23.2087 22.1003 20.9174 22.1003 18.1087C22.1003 15.3 19.809 13.0457 17.0003 13.0457Z", fill="#656565")
                     .task-process__photo-preview
                         .task-process__photo-item 
-                            img(src="img/photo-example.webp", alt="")
-                            button(type="button").task-process__photo-del
+                            .task-process__photo-item-img
+                                a(href="#popup4")._popup-link
+                                    img(src="img/photo-example.webp", alt="")
+                                button(type="button").task-process__photo-del
+                            p.task-process__photo-comment Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            
                         .task-process__photo-item 
-                            img(src="img/photo-example.webp", alt="")
-                            button(type="button").task-process__photo-del  
+                            .task-process__photo-item-img
+                                a(href="#popup4")._popup-link
+                                    img(src="img/photo-example.webp", alt="")
+                                button(type="button").task-process__photo-del     
+                            p.task-process__photo-comment Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     .task-process__toggle 
                         input(id="task-process__slider1",type="checkbox" checked="true")
                         label(for="task-process__slider1").task-process__slider  
@@ -92,7 +145,8 @@ section.task-item
             .task-process__item.task-process__item-lock 
                 .task-process__pagination
                 .task-process__preview 
-                    span Ремонт трубы
+                    .task-process__preview-header
+                        span Ремонт трубы
                 .task-process__body
                     .task-process__body-header 
                         .task-process__body-title Ремонт трубы
@@ -104,11 +158,18 @@ section.task-item
                                     path(d="M17.0003 13.0457C14.1916 13.0457 11.9003 15.337 11.9003 18.1457C11.9003 20.9544 14.1916 23.2087 17.0003 23.2087C19.809 23.2087 22.1003 20.9174 22.1003 18.1087C22.1003 15.3 19.809 13.0457 17.0003 13.0457Z", fill="#656565")
                     .task-process__photo-preview
                         .task-process__photo-item 
-                            img(src="img/photo-example.webp", alt="")
-                            button(type="button").task-process__photo-del
+                            .task-process__photo-item-img
+                                a(href="#popup4")._popup-link
+                                    img(src="img/photo-example.webp", alt="")
+                                button(type="button").task-process__photo-del
+                            p.task-process__photo-comment Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            
                         .task-process__photo-item 
-                            img(src="img/photo-example.webp", alt="")
-                            button(type="button").task-process__photo-del  
+                            .task-process__photo-item-img
+                                a(href="#popup4")._popup-link
+                                    img(src="img/photo-example.webp", alt="")
+                                button(type="button").task-process__photo-del     
+                            p.task-process__photo-comment Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     .task-process__toggle 
                         input(id="task-process__slider2",type="checkbox" checked="true")
                         label(for="task-process__slider2").task-process__slider
@@ -117,7 +178,8 @@ section.task-item
             .task-process__item.task-process__item-lock
                 .task-process__pagination
                 .task-process__preview 
-                    span Восстановление благоустройства
+                    .task-process__preview-header
+                        span Восстановление благоустройства
                 .task-process__body
                     .task-process__body-header 
                         .task-process__body-title Ремонт трубы

@@ -1,0 +1,54 @@
+section 
+    .mobile__container 
+        .task-comment__header 
+            a(href="#").task-item__btn 
+                svg(width="35", height="20", viewBox="0 0 35 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+                    path(fill-rule="evenodd", clip-rule="evenodd", d="M35 9.80236C35 10.6308 34.3284 11.3024 33.5 11.3024L5.60341 11.3024L10.5709 17.5682C11.0856 18.2173 10.9766 19.1608 10.3274 19.6755C9.67823 20.1901 8.73476 20.0811 8.22011 19.4319L0.568364 9.78039L8.24162 0.54166C8.77091 -0.0956255 9.71662 -0.183166 10.3539 0.346134C10.9912 0.875434 11.0787 1.82114 10.5494 2.45842L5.69573 8.30237L33.5 8.30236C34.3284 8.30236 35 8.97394 35 9.80236Z", fill="#828282")
+            .task-item__title Комментарии по завке № 54281
+        .task-comment__block 
+            .task-comment__list 
+                .task-comment__item.task-comment__other-comment
+                    .task-comment__sender 
+                        span Самсонов Николай
+                    .task-comment__body 
+                        .task-comment__content 
+                            p.task-comment__text  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        .task-comment__date
+                            span 14 сент, 17:12
+                .task-comment__item.task-comment__other-comment
+                    .task-comment__sender 
+                        span Самсонов Николай
+                    .task-comment__body 
+                        .task-comment__content 
+                            p.task-comment__text   tempor incididunt 
+                        .task-comment__date
+                            span 14 сент, 17:12
+                .task-comment__item.task-comment__my-comment
+                    .task-comment__body 
+                        .task-comment__content 
+                            p.task-comment__text  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        .task-comment__date
+                            span 14 сент, 17:12
+                .task-comment__item.task-comment__my-comment
+                    .task-comment__body 
+                        .task-comment__content 
+                            .task-comment__voice-message 
+                                .task-comment__voice-message-btn
+                                    input#voice-message-1(type="checkbox").task-comment__voice-message-check
+                                    label(for="voice-message-1").task-comment__voice-message-label
+                                input(type="range" ,min="0", max="100", value="0", step="1").task-comment__voice-track
+                                span.task-comment__voice-length 01:20
+                        .task-comment__date
+                            span 14 сент, 17:12
+            form.task-comment__new-comment
+                textarea(type="text" placeholder="Сообщение").task-comment__input-text
+                button.task-comment__send-comment
+                    svg(width="34", height="32", viewBox="0 0 34 32", fill="none", xmlns="http://www.w3.org/2000/svg")
+                        path(d="M33.2957 14.6806L1.72506 0.109481C1.22236 -0.118799 0.622513 0.0171976 0.272807 0.449473C-0.0793272 0.881748 -0.0914697 1.49616 0.243665 1.94058L10.6256 15.7831L0.243665 29.6256C-0.0914697 30.07 -0.0793272 30.6869 0.270379 31.1167C0.505945 31.4106 0.858079 31.5684 1.21507 31.5684C1.38749 31.5684 1.55992 31.532 1.72263 31.4567L33.2933 16.8857C33.7256 16.6865 34 16.2567 34 15.7831C34 15.3095 33.7256 14.8797 33.2957 14.6806Z", fill="white")
+                button.task-comment__send-voice
+                    svg(width="34", height="34", viewBox="0 0 34 34", fill="none", xmlns="http://www.w3.org/2000/svg")
+                        g(clip-path="url(#clip0)")
+                            path(d="M27.8801 17.5601C27.8801 16.8801 27.3601 16.3601 26.6801 16.3601C26.0001 16.3601 25.4801 16.8801 25.4801 17.5601C25.4801 22.2401 21.6801 26.0401 17.0001 26.0401C12.3201 26.0401 8.52012 22.2401 8.52012 17.5601C8.52012 16.8801 8.00012 16.3601 7.32012 16.3601C6.64012 16.3601 6.12012 16.8801 6.12012 17.5601C6.12012 23.1201 10.2801 27.8001 15.8001 28.4001V31.6001H11.4401C10.7601 31.6001 10.2401 32.1201 10.2401 32.8001C10.2401 33.4801 10.7601 34.0001 11.4401 34.0001H22.5601C23.2401 34.0001 23.7601 33.4801 23.7601 32.8001C23.7601 32.1201 23.2401 31.6001 22.5601 31.6001H18.2001V28.4001C23.7201 27.8001 27.8801 23.1201 27.8801 17.5601Z", fill="white")
+                            path(d="M17.0001 0C13.3201 0 10.3201 3 10.3201 6.68V17.52C10.3201 21.24 13.3201 24.2 17.0001 24.24C20.6801 24.24 23.6801 21.24 23.6801 17.56V6.68C23.6801 3 20.6801 0 17.0001 0Z", fill="white")
+                
+        
