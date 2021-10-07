@@ -335,6 +335,7 @@
 		font-size: 14px;
 		font-weight: 300;
 		width: 100%;
+		max-width: 378px;
 		height: 48px;
 		text-align: left !important;
 
@@ -345,6 +346,9 @@
 	}
 	.multiselect-container{
 		width: 100%;
+		max-height: 250px;
+		overflow-y: auto;
+		padding-right: 10px;
 
 		.dropdown-item.active,.dropdown-item:hover{
 			background-color: #eff9ff !important;

@@ -18,9 +18,7 @@ function handlerDragend(event) {
     this.classList.remove('active');
 }
 
-function handlerDrag(event) {
 
-}
 
 
 // работа с зонами
@@ -40,6 +38,10 @@ function handlerDragenter(event) {
 function handlerDragleave(event) {
     event.preventDefault();
     console.log('dragleave', this);
+    if (event.currentTarget.contains(event.relatedTarget)) {
+        console.log(event.currentTarget.contains(event.relatedTarget));
+        return;
+    }
     this.classList.remove('table-grid-registry-blue');
 }
 
@@ -56,17 +58,18 @@ function handlerDrop(event) {
     const zonaName = this.querySelector(".table-bottom-row__element:nth-child(4) b");
     const zonaStatus = this.querySelector(".table-bottom-row__element:nth-child(5)");
     this.classList.remove('table-grid-registry-blue');
-    if(zonaStatus.textContent === "Утверждена" || zonaStatus.textContent === "Забронирован"){
+    if(zonaStatus.textContent === "Утверждена"){
         return;
+        // this.on();
+        // this.trigger("change");
     }
     if(dragItemStatus === "Занят" || dragItemStatus === "Занят начальником"){
         this.classList.add('table-grid-registry-ellowe');
         zonaName.textContent = dragItemName;
-        zonaStatus.textContent = dragItemStatus;
+
     }
     if(dragItemStatus === "Свободен"){
         this.classList.add('table-grid-registry-green');
         zonaName.textContent = dragItemName;
-        zonaStatus.textContent = dragItemStatus;
     }
 }

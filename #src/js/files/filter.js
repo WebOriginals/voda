@@ -1,4 +1,4 @@
-let serchElemrnts =  document.querySelectorAll('.serch-option');
+let searchElements =  document.querySelectorAll('.serch-option');
 
 const searchOptions = (event) => {
     let val = event.value.trim().toLowerCase();
@@ -19,11 +19,11 @@ const searchOptions = (event) => {
     }
 };
 
-for(serchElemrnt of serchElemrnts){
-    serchElemrnt.oninput = function (){
+searchElements.forEach(searchElement => {
+    searchElement.oninput = function (){
         searchOptions(this);
     }
-};
+});
 
 
 

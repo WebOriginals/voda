@@ -1047,6 +1047,7 @@ body.lock {
   font-size: 14px;
   font-weight: 300;
   width: 100%;
+  max-width: 378px;
   height: 48px;
   text-align: left !important;
 }
@@ -1058,6 +1059,9 @@ body.lock {
 
 .form-row__right .multiselect-container {
   width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 10px;
 }
 
 .form-row__right .multiselect-container .dropdown-item.active,
@@ -2599,10 +2603,6 @@ textarea.input {
   margin-bottom: 10px;
   display: -ms-grid;
   display: grid;
-}
-
-.table-grid-registry *:not(:last-child) {
-  pointer-events: none;
 }
 
 .table-grid-registry .table-bottom-row__element .confirm {
