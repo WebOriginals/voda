@@ -4,6 +4,8 @@
 @@include('files/bodyLook.js')
 @@include('files/popup.js')
 @@include('files/select.js')
+@@include('files/selectMultiple.js')
+@@include('files/selMul.js')
 @@include('files/filter.js')
 @@include('files/mobile-filter.js')
 @@include('files/task-process.js')
