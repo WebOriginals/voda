@@ -14,7 +14,10 @@
 		content: "";
 		//background-color: rgba(0, 0, 0, 0.9);
 		position: fixed;
+<<<<<<< HEAD
 		width: 98%;
+=======
+>>>>>>> 514ad9272caa0a718724d8a0994ec480c778a17b
 		height: 100%;
 		top: 0;
 		left: 0;
@@ -687,6 +690,10 @@
 			width: 40px;
 			height: 40px;
 		}
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 514ad9272caa0a718724d8a0994ec480c778a17b
 	}
 	&__delete-item{
 		width: 80px;
@@ -735,5 +742,52 @@
 		display: flex;
 		align-items: center;
 		
+	}
+}
+.comment-photo__popup{
+	padding: 0;
+	top: 0!important;
+	height: 100vh;
+	background: #000;
+	.comment-photo{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 60px;
+		width: 100%;
+		&__new-comment{
+			width: 100%;
+			padding: 0 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			.mobile__btn{
+				
+			}
+		}
+		&__text-block{
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+		&__text-hint{
+			color: #FFFFFF;
+			font-style: italic;
+			font-size: 20px;
+		}
+		&__img{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img{
+				height: 500px;
+			}
+		}
+		.popup__close{
+			left: 20px;
+			top: 30px;
+		}
 	}
 }

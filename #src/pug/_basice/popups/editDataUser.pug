@@ -22,14 +22,14 @@
                         .editDataUser__row
                             .form-row__title Роль
                             .form-row__right
-                                select.form__select(name='role')
+                                select.js-selectize(name='role')
                                     option(value='Начальник участка', selected) Начальник участка
                                     option(value='Мобильный мастер') Мобильный мастер
                                     option(value='Диспетчер') Диспетчер
                         .editDataUser__row
                             .form-row__title Отдел 
                             .form-row__right
-                                select.form__select(name='department')
+                                select.js-selectize(name='department')
                                     option(value='ЦЭКС и КНС', selected) ЦЭКС и КНС
                                     option(value='ЦЭКС') ЦЭКС
                                     option(value='КНС') КНС
@@ -45,12 +45,13 @@
                             .form-row__title Пароль
                             .form-row__right.form-row__password
                                 input(type="password").form-row__input.newpassword
-                                button(type="button", data-target-password="newpassword").password-control
+                                button(type="button", data-target-password="newpassword")
                         .editDataUser__row
                             .form-row__title Подтвердите пароль
                             .form-row__right.form-row__password
                                 input(type="password").form-row__input.repeatpassword
-                                button(type="button", data-target-password="repeatpassword").password-control
+                                span.error-password-message Пароли не совпадают
+                                
                         .editDataUser__row
                             .form-row__title Комментарий
                             .form-row__right

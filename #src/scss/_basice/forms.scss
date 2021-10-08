@@ -391,10 +391,23 @@ textarea.input {
 }
 .password-control.view {
 	background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
-
 }
 .sorted__column{
 	cursor: pointer;
+}
+.error-password{
+background: #FBD0D1;
+}
+.error-password-message{
+	display: none;
+	position: absolute;
+	top: -20px;
+	right: 0;
+	color: #ED131A;
+
+}
+.pass-watch{
+	display: block;
 }
 //</QUANTITY>====================================================================================================
 

@@ -1,0 +1,115 @@
+.task-comment{
+    font-size: 22px;
+    &__header{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 0
+    }
+    &__block{
+        height: calc(100vh - 200px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__list{
+        font-size: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px 0;
+        height: 100%;
+        overflow-y: scroll;
+    }
+    &__item{
+        max-width: 667px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__text{
+        margin: 0;
+    }
+    &__body {
+        padding: 20px 10px 10px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: #FFF;
+        border-radius: 7px;
+    }
+    &__date{
+        align-self: flex-end;
+    }
+    &__date,&__sender{
+        font-style: italic;
+        font-size: 20px;
+        color: #888888;
+    }
+    &__other-comment{
+        align-self: flex-start;
+    }
+    &__my-comment{
+        align-self: flex-end;
+    }
+    &__my-comment &__body{
+        background: #D9EAF5;
+    }
+    &__input-text{
+        height: 80px;
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid #BDBDBD;
+        border-radius: 5px;
+        font-size: 22px;
+        padding: 26px;
+        resize: none;
+    }
+    &__new-comment{
+        display: flex;
+        gap: 20px;
+        padding: 20px 0;
+    }
+    &__send-comment,&__send-voice{
+        min-width: 80px;
+        min-height: 80px;
+        background: #0072BC;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 50%;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+           background: #00558C 
+        }
+    }
+    &__voice-message {
+        display: flex; 
+        align-items: center;
+        gap: 20px;
+    }
+    &__voice-track{
+        width: 370px;
+        height: 30px;
+    }
+    &__voice-message-btn{
+        display: flex;
+        align-items: center;
+        input[type=checkbox]{
+            display: none;
+        }
+        label{
+            background-image: url("../img/icons/play-message.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 40px;
+            height: 40px;
+            margin: 0;
+        }
+        input[type=checkbox]:checked+label{
+            background-image: url("../img/icons/Pause.svg");
+        }   
+    }
+}

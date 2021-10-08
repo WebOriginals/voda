@@ -1,10 +1,77 @@
+
+
 //Select
 let selects = document.getElementsByTagName('select');
 if (selects.length > 0) {
         selects_init();
 
 }
+let _slideUp = (target, duration = 500) => {
+    target.style.transitionProperty = 'height, margin, padding';
+    target.style.transitionDuration = duration + 'ms';
+    target.style.height = target.offsetHeight + 'px';
+    target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    window.setTimeout(() => {
+        target.style.display = 'none';
+        target.style.removeProperty('height');
+        target.style.removeProperty('padding-top');
+        target.style.removeProperty('padding-bottom');
+        target.style.removeProperty('margin-top');
+        target.style.removeProperty('margin-bottom');
+        target.style.removeProperty('overflow');
+        target.style.removeProperty('transition-duration');
+        target.style.removeProperty('transition-property');
+        target.classList.remove('_slide');
+    }, duration);
+}
+let _slideDown = (target, duration = 500) => {
+    target.style.removeProperty('display');
+    let display = window.getComputedStyle(target).display;
+    if (display === 'none')
+        display = 'block';
 
+    target.style.display = display;
+    let height = target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    target.offsetHeight;
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + 'ms';
+    target.style.height = height +'px';
+    target.style.removeProperty('padding-top');
+    target.style.removeProperty('padding-bottom');
+    target.style.removeProperty('margin-top');
+    target.style.removeProperty('margin-bottom');
+    window.setTimeout(() => {
+        target.style.removeProperty('height');
+        target.style.removeProperty('overflow');
+        target.style.removeProperty('transition-duration');
+        target.style.removeProperty('transition-property');
+        target.classList.remove('_slide');
+    }, duration);
+}
+let _slideToggle = (target, duration = 500, event) => {
+    if (!target.classList.contains('_slide')) {
+        if(event.target.closest('.serch-option'))
+            return;
+        target.classList.add('_slide');
+        if (window.getComputedStyle(target).display === 'none') {
+            return _slideDown(target, duration);
+        } else {
+            return _slideUp(target, duration, event);
+        }
+    }
+}
 function selects_init() {
     for (let index = 0; index < selects.length; index++) {
         const select = selects[index];
@@ -16,6 +83,7 @@ function selects_init() {
     //select_callback();
     document.addEventListener('click', function (e) {
         selects_close(e);
+        
     });
     document.addEventListener('keydown', function (e) {
         if (e.which == 27) {
@@ -54,7 +122,17 @@ function select_init(select) {
 
     select_item(select);
 }
-
+function hasClassedParent(el, cssClass) {
+    if(el.parentNode && el.parentNode.tagName !== 'BODY') {
+      if(el.parentNode.classList.contains(cssClass)) {
+        return el.parentNode;
+      } else {
+        return hasClassedParent(el.parentNode, cssClass);
+      }
+    } else {
+      return null;
+    }
+  }
 function select_item(select) {
     const select_parent = select.parentElement;
     const select_items = select_parent.querySelector('.select__item');
@@ -69,11 +147,10 @@ function select_item(select) {
 
     let select_type_content = '';
     if (select_type == 'input') {
-        select_type_content = '<div class="select__value"><input autocomplete="off" type="text" name="form[]" value="' + select_selected_text + '" data-error="Ошибка" data-value="' + select_selected_text + '" class="select__input"></div>';
+        select_type_content = '<div class="select__value"><input autocomplete="off"  type="text" name="form[]" value="' + select_selected_text + '" data-error="Ошибка" data-value="' + select_selected_text + '" class="select__input"></div>';
     } else {
         select_type_content = '<div class="select__value"><span>' + select_selected_text + '</span></div>';
     }
-
     select_parent.insertAdjacentHTML('beforeend',
         '<div class="select__item">' +
         '<div class="select__title">' + select_type_content + '</div>' +
@@ -90,7 +167,6 @@ function select_actions(original, select) {
     const select_options = select.querySelectorAll('.select__option');
     const select_type = original.getAttribute('data-type');
     const select_input = select.querySelector('.select__input');
-
     select_item.addEventListener('click', function (event) {
         let selects = document.querySelectorAll('.select');
         for (let index = 0; index < selects.length; index++) {
@@ -98,13 +174,23 @@ function select_actions(original, select) {
             const select_body_options = select.querySelector('.select__options');
             if (select != select_item.closest('.select')) {
                 select.classList.remove('_active');
+
                 _slideUp(select_body_options, 100);
             }
         }
         _slideToggle(select_body_options, 100, event);
         select.classList.toggle('_active');
+       
+        document.querySelectorAll(".serch-option").forEach(el=>{
+            if(hasClassedParent(el, "_active")){
+                el.focus({
+                    preventScroll: true
+                  });
+            }
+        })
+        
     });
-
+ 
     for (let index = 0; index < select_options.length; index++) {
         const select_option = select_options[index];
         const select_option_value = select_option.getAttribute('data-value');
@@ -179,70 +265,4 @@ function selects_update_all() {
 }
 
 
-let _slideUp = (target, duration = 500) => {
-    target.style.transitionProperty = 'height, margin, padding';
-    target.style.transitionDuration = duration + 'ms';
-    target.style.height = target.offsetHeight + 'px';
-    target.offsetHeight;
-    target.style.overflow = 'hidden';
-    target.style.height = 0;
-    target.style.paddingTop = 0;
-    target.style.paddingBottom = 0;
-    target.style.marginTop = 0;
-    target.style.marginBottom = 0;
-    window.setTimeout(() => {
-        target.style.display = 'none';
-        target.style.removeProperty('height');
-        target.style.removeProperty('padding-top');
-        target.style.removeProperty('padding-bottom');
-        target.style.removeProperty('margin-top');
-        target.style.removeProperty('margin-bottom');
-        target.style.removeProperty('overflow');
-        target.style.removeProperty('transition-duration');
-        target.style.removeProperty('transition-property');
-        target.classList.remove('_slide');
-    }, duration);
-}
-let _slideDown = (target, duration = 500) => {
-    target.style.removeProperty('display');
-    let display = window.getComputedStyle(target).display;
-    if (display === 'none')
-        display = 'block';
-
-    target.style.display = display;
-    let height = target.offsetHeight;
-    target.style.overflow = 'hidden';
-    target.style.height = 0;
-    target.style.paddingTop = 0;
-    target.style.paddingBottom = 0;
-    target.style.marginTop = 0;
-    target.style.marginBottom = 0;
-    target.offsetHeight;
-    target.style.transitionProperty = "height, margin, padding";
-    target.style.transitionDuration = duration + 'ms';
-    target.style.height = height + 'px';
-    target.style.removeProperty('padding-top');
-    target.style.removeProperty('padding-bottom');
-    target.style.removeProperty('margin-top');
-    target.style.removeProperty('margin-bottom');
-    window.setTimeout(() => {
-        target.style.removeProperty('height');
-        target.style.removeProperty('overflow');
-        target.style.removeProperty('transition-duration');
-        target.style.removeProperty('transition-property');
-        target.classList.remove('_slide');
-    }, duration);
-}
-let _slideToggle = (target, duration = 500, event) => {
-    if (!target.classList.contains('_slide')) {
-        if(event.target.closest('.serch-option'))
-            return;
-        target.classList.add('_slide');
-        if (window.getComputedStyle(target).display === 'none') {
-            return _slideDown(target, duration);
-        } else {
-            return _slideUp(target, duration, event);
-        }
-    }
-}
 

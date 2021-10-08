@@ -7,9 +7,12 @@
 @@include('files/selectMultiple.js')
 @@include('files/selMul.js')
 @@include('files/filter.js')
-@@include('files/password.js')
 @@include('files/mobile-filter.js')
 @@include('files/dragdrop.js')
+@@include('files/task-process.js')
+@@include('files/task-process.js')
+@@include('files/checkpassword.js')
+
 
 //slider
 @@include('files/sliders/first.js')
