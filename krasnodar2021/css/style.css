@@ -1061,7 +1061,57 @@ body.lock {
   width: 100%;
   max-height: 250px;
   overflow-y: auto;
-  padding-right: 10px;
+}
+
+.form-row__right .multiselect-container::-webkit-scrollbar-button {
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0;
+}
+
+.form-row__right .multiselect-container::-webkit-scrollbar-track {
+  background-color: #e7e7e7;
+  border-radius: 50px;
+}
+
+.form-row__right .multiselect-container::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #0072BC;
+}
+
+.form-row__right .multiselect-container::-webkit-resizer {
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0;
+}
+
+.form-row__right .multiselect-container::-webkit-scrollbar {
+  width: 0;
+}
+
+.form-row__right .multiselect-container::-webkit-scrollbar-button {
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0;
+}
+
+.form-row__right .multiselect-container::-webkit-scrollbar-track {
+  border-radius: 50px;
+}
+
+.form-row__right .multiselect-container::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #0072BC;
+}
+
+.form-row__right .multiselect-container::-webkit-resizer {
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 0;
+}
+
+.form-row__right .multiselect-container::-webkit-scrollbar {
+  width: 5px !important;
 }
 
 .form-row__right .multiselect-container .dropdown-item.active,
@@ -2560,7 +2610,7 @@ textarea.input {
 }
 
 .aside-transport.active {
-  background-color: #00aced;
+  background-color: #EDEDF2;
 }
 
 .aside-transport__name {
@@ -2570,6 +2620,18 @@ textarea.input {
 
 .aside-transport__status {
   margin-bottom: 10px;
+}
+
+.aside__btn {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.aside__btn button {
+  width: 100%;
 }
 
 .registryFilter-body {

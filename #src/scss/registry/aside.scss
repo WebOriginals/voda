@@ -78,7 +78,7 @@
       margin-right: 3px;
     }
     &.active{
-      background-color: #00aced;
+      background-color: #EDEDF2;
     }
   }
   &-transport__name{
@@ -88,5 +88,12 @@
   &-transport__status{
     margin-bottom: 10px;
   }
-
+  &__btn{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    button{
+      width: 100%;
+    }
+  }
 }
