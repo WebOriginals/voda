@@ -33,17 +33,14 @@
 
 .table-grid-registry-green{
   border: 1px solid $color_6;
-  background: lighten($color_6, 65);
+  background: lighten($color_6, 65) !important;
   .confirm{
     display: block !important;
   }
 }
-.table-grid-registry-ellowe{
-  border: 1px solid $color_7;
-  background: lighten($color_7, 45);
-  .confirm{
-    display: block !important;
-  }
+.table-grid-registry-yellow{
+  border: 1px solid $color_7 ;
+  background: lighten($color_7, 45) !important;
 }
 .table-grid-registry-rad-border{
   border-left: 5px solid $color_5;

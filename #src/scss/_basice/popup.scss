@@ -14,7 +14,7 @@
 		content: "";
 		//background-color: rgba(0, 0, 0, 0.9);
 		position: fixed;
-		width: 100%;
+		width: 98%;
 		height: 100%;
 		top: 0;
 		left: 0;
@@ -76,8 +76,8 @@
 		width: 15px;
 		height: 15px;
 		position: absolute;
-		top: 15px;
-		right: 15px;
+		top: 25px;
+		right: 25px;
 		cursor: pointer;
 		z-index: 30;
 		//background: url("../img/icons/close.svg") 0 0 no-repeat;
@@ -209,9 +209,9 @@
 	}
 
 	&__body{
-		overflow-y: auto;
-		max-height: 400px;
-		padding: 0 15px 2px 0;
+		//overflow-y: auto;
+		//max-height: 400px;
+		//padding: 0 15px 2px 0;
 		::-webkit-scrollbar-button {
 			background-repeat: no-repeat;
 			width: 5px;
@@ -686,8 +686,6 @@
 		label::before{
 			width: 40px;
 			height: 40px;
-		}
-		.urgently label:before{
 		}
 	}
 	&__delete-item{

@@ -51,6 +51,7 @@ body {
 .duo {
   display: grid;
   grid-template-columns: 1fr 330px;
+  grid-gap: 30px;
 }
 table{
   margin: 0;

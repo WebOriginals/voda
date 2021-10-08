@@ -56,8 +56,8 @@ function handlerDrop(event) {
     const zonaName = this.querySelector(".table-bottom-row__element:nth-child(4) b");
     const zonaStatus = this.querySelector(".table-bottom-row__element:nth-child(5)");
     this.classList.remove('table-grid-registry-blue');
-    //console.log(zonaStatus.dataset.zonaStatus);
-    if(zonaStatus.textContent === "Утверждена"){
+
+    if(zonaStatus.dataset.zonaStatus === 1 || zonaStatus.dataset.zonaStatus === 2 || zonaStatus.dataset.zonaStatus === 3 || zonaStatus.dataset.zonaStatus === 6){
         return;
     }
     if(dragItemStatus === "Занят" || dragItemStatus === "Занят начальником"){

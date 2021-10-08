@@ -82,6 +82,64 @@
                         .form__btns.form-btns
                             button.form-btns__btn.button-b(type="submit") Сохранить
                             button.form-btns__btn.button-g(type="reset") Отмена
+.popup.popup-center.popup_popup12
+    .popup__body.custom-body
+        .popup__content.application-content
+            a.popup__close.close-popup
+                img(src="img/icons/close.svg")
+            .modal-text
+                .modal-text__title Завка на транспорт № 54253
+                form.modal-text__form(method="post" enctype="" autocomplete="off")
+                    .form__top
+                        .form__row.form-row
+                            .form-row__title № заявки на работы
+                            .form-row__right
+                                input.form-row__input
+                        .form__row.form-row
+                            .form-row__title Адрес производства работ
+                            .form-row__right
+                                input.form-row__input
+
+
+
+                    .form__transport__body
+                        .form__transport
+                            input(style="display: none;")
+                            .form__row.form-row
+                                .form-row__title Тип транспорта
+                                .form-row__right
+                                    select.form__select(name='house')
+                                        option(value='Бульдозер', selected) Бульдозер
+                                        option(value='Кран') Кран
+                                        option(value='Самосвал') Самосвал
+                                        option(value='Трактор') Трактор
+
+
+
+                            .form__row.form-row
+                                .form-row__title Дата и время начала работ
+                                .form-row__right
+                                    input.form-row__input(type="date"  name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31")
+                                    input.form-row__input(type="time" id="appt" name="appt" min="09:00" max="18:00" required)
+
+                            .form__row.form-row
+                                .form-row__title Продолжительность использования
+                                .form-row__right
+                                    input.form-row__input(type="time" name="appt" min="09:00" max="18:00" required)
+                                    span часов
+                            .form__row.form-row
+                                .form-row__title Приоритет
+                                .form-row__right.urgently
+                                    input(type='checkbox', name='urgently' )
+                                    label(for='urgently') Экстренная
+
+
+
+
+                    .form__bottom
+                        .form__btns.form-btns
+                            button.form-btns__btn.button-b(type="submit") Сохранить
+                            button.form-btns__btn.button-g(type="reset") Отмена
 
 
 
